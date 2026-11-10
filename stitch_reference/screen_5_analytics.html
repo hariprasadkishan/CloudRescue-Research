@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>CloudRescue — Architectural Resilience Inquiry · 05 Analytics</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        border-radius: 0 !important;
+      }
+      * {
+        border-radius: 0 !important;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary": "#000000",
+            "on-tertiary-fixed-variant": "#464747",
+            "surface-container-low": "#f6f3eb",
+            "on-error-container": "#93000a",
+            "background": "#fcf9f1",
+            "surface-bright": "#fcf9f1",
+            "secondary-container": "#2457e8",
+            "on-primary-container": "#858383",
+            "outline": "#747878",
+            "on-background": "#1c1c17",
+            "surface-dim": "#dddad2",
+            "secondary-fixed": "#dce1ff",
+            "on-tertiary-container": "#848484",
+            "primary-fixed-dim": "#c8c6c5",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#0039b4",
+            "on-surface": "#1c1c17",
+            "primary": "#000000",
+            "secondary-fixed-dim": "#b7c4ff",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#e5e2da",
+            "tertiary-container": "#1b1c1c",
+            "on-primary-fixed-variant": "#474746",
+            "on-tertiary-fixed": "#1b1c1c",
+            "on-primary-fixed": "#1c1b1b",
+            "on-surface-variant": "#444748",
+            "surface-container": "#f1eee6",
+            "tertiary-fixed-dim": "#c7c6c6",
+            "inverse-primary": "#c8c6c5",
+            "surface-container-high": "#ebe8e0",
+            "on-error": "#ffffff",
+            "primary-fixed": "#e5e2e1",
+            "inverse-surface": "#1c1c17",
+            "surface-variant": "#e5e2da",
+            "primary-container": "#2457e8",
+            "outline-variant": "#d3d0c8",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#ffffff",
+            "surface-tint": "#5f5e5e",
+            "tertiary-fixed": "#e4e2e2",
+            "on-primary": "#ffffff",
+            "secondary": "#2457e8",
+            "inverse-on-surface": "#fcf9f1",
+            "surface": "#fcf9f1",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#001551"
+          },
+          fontFamily: {
+            "serif": ["Instrument Serif", "Georgia", "serif"],
+            "headline-lg": ["Instrument Serif", "Georgia", "serif"],
+            "headline-md": ["Instrument Serif", "Georgia", "serif"],
+            "headline-sm": ["Instrument Serif", "Georgia", "serif"],
+            "mono": ["IBM Plex Mono", "monospace"],
+            "code": ["IBM Plex Mono", "monospace"],
+            "label-md": ["IBM Plex Mono", "monospace"],
+            "label-sm": ["IBM Plex Mono", "monospace"],
+            "label-lg": ["IBM Plex Mono", "monospace"],
+            "sans": ["Geist", "Inter", "sans-serif"],
+            "body-sm": ["Geist", "Inter", "sans-serif"],
+            "body-md": ["Geist", "Inter", "sans-serif"],
+            "body-lg": ["Geist", "Inter", "sans-serif"]
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin-sm": "1.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "3rem",
+            "gutter-sm": "1rem",
+            "space-lg": "1.5rem"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased selection:bg-secondary-container selection:text-white">
+<!-- TOP MASTHEAD (VARIANT A: UNIFIED SWISS MONOGRAPH) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface border-b border-outline-variant">
+<div class="h-16 w-full px-6 lg:px-12 flex items-center justify-between gap-4">
+<div class="flex items-baseline gap-4 min-w-max">
+<a class="font-mono text-sm tracking-widest text-on-surface uppercase font-bold" href="#">CLOUDRESCUE</a>
+<span class="hidden xl:inline-block font-mono text-[11px] text-on-surface-variant uppercase tracking-wider pl-3 border-l border-outline-variant">SYS.VER 4.2.0 · INQUIRY SERIES</span>
+</div>
+<!-- Numbered links 01 OVERVIEW through 07 PUBLICATION with 05 ANALYTICS active -->
+<nav class="hidden lg:flex items-center gap-6 h-full font-mono text-[11px] uppercase tracking-wider">
+<a class="h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" href="#">01 OVERVIEW</a>
+<a class="h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" href="#">02 INQUIRY</a>
+<a class="h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" href="#">03 SIMULATOR</a>
+<a class="h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" href="#">04 BENCHMARK</a>
+<a class="h-full flex items-center text-secondary border-b-2 border-secondary font-semibold" href="#">05 ANALYTICS</a>
+<a class="h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" href="#">06 METHODOLOGY</a>
+<a class="h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" href="#">07 PUBLICATION</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex flex-col text-right font-mono text-[10px] leading-tight text-on-surface-variant">
+<span class="text-on-surface font-semibold">TELEMETRY ACTIVE</span>
+<span>AS-64496 · NOMINAL</span>
+</div>
+<a class="inline-flex items-center justify-center px-3.5 py-1.5 bg-inverse-surface text-inverse-on-surface font-mono text-[11px] uppercase tracking-wider hover:bg-secondary transition-colors" href="#">
+          [RUN EXPERIMENT →]
+        </a>
+</div>
+</div>
+</header>
+<!-- MAIN VIEWPORT CONTENT -->
+<main class="w-full pt-16 bg-surface min-h-[calc(100vh-16rem)]">
+<div class="flex flex-col w-full">
+<!-- SECTION 05 TOP METADATA & TELEMETRY BAND -->
+<section class="w-full bg-surface-container-low border-b border-outline-variant px-6 lg:px-12 py-2.5">
+<div class="w-full flex flex-col xl:flex-row xl:items-center justify-between gap-2 font-mono text-[11px] text-on-surface-variant">
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+<span class="text-on-surface font-semibold">EXPERIMENT ID: #EXP-7729-OMEGA</span>
+<span class="text-outline-variant">/</span>
+<span>SEED: 0x7F2B91A4</span>
+<span class="text-outline-variant">/</span>
+<span>WORKLOAD: BURST-STOCHASTIC (50,000 REQ/SEC)</span>
+<span class="text-outline-variant">/</span>
+<span>FAULT: SIGKILL CASCADE (OOM)</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-right">
+<span class="bg-surface-container-highest px-2 py-0.5 text-on-surface font-semibold">N = 120 (60 BASELINE / 60 RESILIENT)</span>
+<span class="text-secondary font-semibold">CONFIDENCE INTERVAL: 99.5% (ALPHA = 0.005)</span>
+</div>
+</div>
+</section>
+<!-- EDITORIAL MASTHEAD & ASYMMETRIC ABSTRACT -->
+<section class="w-full px-6 lg:px-12 pt-10 pb-8 border-b border-outline-variant">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Metadata Rail (3 Columns) -->
+<div class="lg:col-span-3 flex flex-col gap-4 border-r border-outline-variant/60 pr-6">
+<div class="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-secondary font-semibold">
+<span class="material-symbols-outlined text-sm">bar_chart</span>
+<span>EMPIRICAL DISTRIBUTION ASSAY</span>
+</div>
+<div class="font-mono text-[11px] text-on-surface-variant leading-relaxed space-y-0.5">
+<div class="text-on-surface font-semibold">VOL. 04 / RESEARCH SECTION 05</div>
+<div>SAMPLING METHOD: LATIN HYPERCUBE</div>
+<div>ISOLATION: KVM / HARDWARE PINNED</div>
+<div>OBSERVATION WINDOW: T0 + 300 SEC</div>
+<div>REPLICATION STATUS: DETERMINISTIC</div>
+</div>
+<div class="p-3 bg-surface-container-low border border-outline-variant">
+<span class="font-mono text-[10px] uppercase tracking-wider text-on-surface font-semibold block mb-1">HYPOTHESIS STATE</span>
+<p class="font-mono text-[11px] text-on-surface-variant leading-normal">
+                H1 Validated: Resilient decentralized state topologies compress stochastic MTTR variance by 97.1% under deterministic partition injection.
+              </p>
+</div>
+</div>
+<!-- Right Main Editorial Headline + Abstract (9 Columns) -->
+<div class="lg:col-span-9 flex flex-col gap-6">
+<div>
+<div class="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant mb-1.5">[SECTION 05.01 // SYNTHESIS &amp; VARIANCE ANALYSIS]</div>
+<h1 class="font-serif text-5xl lg:text-7xl text-on-surface tracking-tight leading-[1.02]">
+                The distribution tells the story.
+              </h1>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-on-surface-variant">
+<div class="font-serif text-2xl lg:text-[1.75rem] text-on-surface leading-snug">
+                Aggregated point averages routinely falsify recovery readiness. A 14-second nominal mean reliably hides a catastrophic bimodal distribution where 38% of instances spiral into unbounded cascading deadlock.
+              </div>
+<div class="font-sans text-[15px] leading-relaxed flex flex-col gap-3">
+<p>
+                  In production incident forensics, the arithmetic mean is an instrument of self-deception. Across 120 synchronized Latin Hypercube trials subjected to synthetic memory pressure and instantaneous SIGKILL cascades, the baseline architecture exhibited massive multimodal variance: some nodes recovered in seconds while adjacent partitions suffered cascading consensus partition lockup.
+                </p>
+<p class="font-mono text-[12px] text-on-surface bg-surface-container-low p-2.5 border-l-2 border-secondary leading-normal">
+                  The resilient architecture specimen compresses stochastic spread into a razor-thin deterministic band. Under identical kernel noise vectors, tail volatility vanishes.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VISUALIZATIONS SECTION: 3 EMPIRICAL DISTRIBUTION PANELS -->
+<section class="w-full px-6 lg:px-12 py-8 border-b border-outline-variant">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-4 pb-2 border-b border-outline-variant gap-2">
+<div class="font-mono text-xs uppercase tracking-wider text-on-surface font-semibold">
+            EMPIRICAL OBSERVATIONS · 3-PANEL HARVEST
+          </div>
+<div class="font-mono text-[11px] text-on-surface-variant">
+            SHOWING SYNCHRONIZED TRACE ENSEMBLE [N=60 VS N=60]
+          </div>
+</div>
+<!-- 3 Distribution Figures Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+<!-- FIGURE 05.A: RECOVERY-TIME (MTTR) DISTRIBUTION -->
+<div class="bg-surface-container-lowest border border-outline-variant p-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-on-surface-variant mb-1">
+<span>FIG 05.A // MTTR PROBABILITY DENSITY</span>
+<span class="font-mono text-on-surface font-semibold">T_RECOVERY</span>
+</div>
+<h2 class="font-serif text-2xl text-on-surface mb-1">
+                Recovery-Time (MTTR) Spread
+              </h2>
+<p class="font-sans text-xs text-on-surface-variant mb-4">
+                Kernel density estimation and box quartile bounds. Resilient demonstrates zero timeout skew.
+              </p>
+<!-- Inline SVG Distribution Plot: FIG 05.A -->
+<div class="w-full bg-[#F3F0E8] border border-outline-variant p-2.5 mb-4">
+<svg class="w-full h-auto text-on-surface font-mono text-[10px]" preserveaspectratio="xMidYMid meet" viewbox="0 0 400 240">
+<!-- Background hairline grid lines -->
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="40" x2="380" y1="30" y2="30"></line>
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="40" x2="380" y1="80" y2="80"></line>
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="40" x2="380" y1="130" y2="130"></line>
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="40" x2="380" y1="180" y2="180"></line>
+<!-- Thin black axes -->
+<line stroke="#1C1C17" stroke-width="1" x1="40" x2="40" y1="20" y2="190"></line>
+<line stroke="#1C1C17" stroke-width="1" x1="40" x2="380" y1="190" y2="190"></line>
+<!-- X-Axis Labels -->
+<text fill="#444748" font-size="9" text-anchor="middle" x="40" y="206">0s</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="120" y="206">45s</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="200" y="206">90s</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="280" y="206">135s</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="360" y="206">180s (TIMEOUT)</text>
+<!-- BASELINE DISTRIBUTION (Charcoal diffuse curve) -->
+<path d="M 80,190 Q 210,185 240,165 T 285,60 T 320,120 T 375,188 L 375,190 Z" fill="#1C1C17" fill-opacity="0.08"></path>
+<path d="M 80,190 Q 210,185 240,165 T 285,60 T 320,120 T 375,188" fill="none" stroke="#1C1C17" stroke-width="1.5"></path>
+<!-- Baseline Median marker -->
+<line stroke="#1C1C17" stroke-dasharray="3 2" stroke-width="1" x1="292" x2="292" y1="50" y2="190"></line>
+<text fill="#1C1C17" font-weight="600" text-anchor="middle" x="292" y="44">M=141.8s</text>
+<!-- RESILIENT DISTRIBUTION (Electric Blue #2457E8 hyper-narrow peak) -->
+<path d="M 40,190 L 44,185 Q 47,20 49,20 Q 52,20 54,185 L 60,190 Z" fill="#2457E8" fill-opacity="0.25"></path>
+<path d="M 40,190 L 44,185 Q 47,20 49,20 Q 52,20 54,185 L 60,190" fill="none" stroke="#2457E8" stroke-width="2"></path>
+<!-- Resilient Median Marker -->
+<text fill="#2457E8" font-weight="600" text-anchor="start" x="56" y="28">M=4.18s</text>
+<!-- Annotations -->
+<rect fill="#FCF9F1" height="28" stroke="#D3D0C8" stroke-width="0.5" width="135" x="235" y="70"></rect>
+<text fill="#1C1C17" font-size="8.5" x="240" y="82">BASELINE IQR: 112s–168s</text>
+<text fill="#747878" font-size="7.5" x="240" y="93">SEVERE TAIL TO TIMEOUT</text>
+<rect fill="#FCF9F1" height="28" stroke="#2457E8" stroke-width="0.5" width="135" x="75" y="115"></rect>
+<text fill="#2457E8" font-size="8.5" font-weight="600" x="80" y="127">RESILIENT IQR: 3.8s–4.6s</text>
+<text fill="#444748" font-size="7.5" x="80" y="138">ZERO CATASTROPHIC ESCAPE</text>
+</svg>
+</div>
+<!-- Statistical Metrics Grid -->
+<div class="grid grid-cols-2 gap-2 font-mono text-xs bg-surface-container-low border border-outline-variant p-2.5 mb-2">
+<div>
+<span class="text-on-surface-variant block text-[10px]">BASELINE CLUSTER</span>
+<span class="text-on-surface font-semibold">141.8s MEDIAN</span>
+<span class="text-error block text-[10px]">σ = ±22.4s (High)</span>
+</div>
+<div class="border-l border-outline-variant pl-2">
+<span class="text-secondary block text-[10px] font-semibold">RESILIENT SPECIMEN</span>
+<span class="text-secondary font-semibold">4.18s MEDIAN</span>
+<span class="text-on-surface block text-[10px]">σ = ±0.41s (Deterministic)</span>
+</div>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant font-mono text-[10px] leading-tight text-on-surface-variant">
+              FIG 05.A — EMPIRICAL RECOVERY TIME DISTRIBUTIONS UNDER DETERMINISTIC SPLIT-BRAIN INJECTION.
+            </div>
+</div>
+<!-- FIGURE 05.B: REQUEST SUCCESS RATE DISTRIBUTION (CDF) -->
+<div class="bg-surface-container-lowest border border-outline-variant p-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-on-surface-variant mb-1">
+<span>FIG 05.B // CUMULATIVE PROBABILITY (ECDF)</span>
+<span class="font-mono text-on-surface font-semibold">P(SUCCESS ≤ X)</span>
+</div>
+<h2 class="font-serif text-2xl text-on-surface mb-1">
+                Request Success Rate Density
+              </h2>
+<p class="font-sans text-xs text-on-surface-variant mb-4">
+                Empirical cumulative density. Baseline exhibits a severe bimodal cliff collapsing at 42.1%.
+              </p>
+<!-- Inline SVG Distribution Plot: FIG 05.B -->
+<div class="w-full bg-[#F3F0E8] border border-outline-variant p-2.5 mb-4">
+<svg class="w-full h-auto text-on-surface font-mono text-[10px]" preserveaspectratio="xMidYMid meet" viewbox="0 0 400 240">
+<!-- Grid lines -->
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="40" x2="380" y1="40" y2="40"></line>
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="40" x2="380" y1="90" y2="90"></line>
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="40" x2="380" y1="140" y2="140"></line>
+<!-- Thin black axes -->
+<line stroke="#1C1C17" stroke-width="1" x1="40" x2="40" y1="20" y2="190"></line>
+<line stroke="#1C1C17" stroke-width="1" x1="40" x2="380" y1="190" y2="190"></line>
+<!-- X-Axis Labels -->
+<text fill="#444748" font-size="9" text-anchor="middle" x="40" y="206">0%</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="125" y="206">25%</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="210" y="206">50%</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="295" y="206">75%</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="380" y="206">100%</text>
+<!-- Y-Axis Labels -->
+<text fill="#444748" font-size="9" text-anchor="end" x="35" y="44">1.0</text>
+<text fill="#444748" font-size="9" text-anchor="end" x="35" y="115">0.5</text>
+<text fill="#444748" font-size="9" text-anchor="end" x="35" y="190">0.0</text>
+<!-- BASELINE ECDF (Stepped curve collapsing) -->
+<path d="M 40,190 L 80,186 L 105,170 L 140,140 L 180,95 L 210,80 L 250,72 L 310,65 L 380,40" fill="none" stroke="#1C1C17" stroke-width="1.8"></path>
+<circle cx="180" cy="95" fill="#1C1C17" r="3.5"></circle>
+<text fill="#1C1C17" font-size="9" font-weight="600" x="188" y="99">MEDIAN 42.1%</text>
+<!-- RESILIENT ECDF (Steep vertical cliff near 100%) -->
+<path d="M 40,190 L 360,190 L 372,185 L 376,60 L 380,40" fill="none" stroke="#2457E8" stroke-width="2.2"></path>
+<circle cx="376" cy="60" fill="#2457E8" r="3.5"></circle>
+<text fill="#2457E8" font-size="9" font-weight="600" text-anchor="end" x="372" y="32">99.4% MEDIAN (σ=0.32%)</text>
+<!-- Callout Box -->
+<rect fill="#FCF9F1" height="34" stroke="#D3D0C8" stroke-width="0.5" width="180" x="60" y="50"></rect>
+<text fill="#1C1C17" font-size="8.5" font-weight="600" x="66" y="64">BIMODAL PARTITION COLLAPSE</text>
+<text fill="#747878" font-size="7.5" x="66" y="76">38% OF TRIALS EXHIBIT CASCADE FAIL</text>
+</svg>
+</div>
+<!-- Statistical Metrics Grid -->
+<div class="grid grid-cols-2 gap-2 font-mono text-xs bg-surface-container-low border border-outline-variant p-2.5 mb-2">
+<div>
+<span class="text-on-surface-variant block text-[10px]">BASELINE YIELD</span>
+<span class="text-on-surface font-semibold">42.1% SUCCESS</span>
+<span class="text-error block text-[10px]">382,410 DROPPED</span>
+</div>
+<div class="border-l border-outline-variant pl-2">
+<span class="text-secondary block text-[10px] font-semibold">RESILIENT YIELD</span>
+<span class="text-secondary font-semibold">99.4% SUCCESS</span>
+<span class="text-on-surface block text-[10px]">2,140 DROPPED (0.007%)</span>
+</div>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant font-mono text-[10px] leading-tight text-on-surface-variant">
+              FIG 05.B — EMPIRICAL CDF OF INGEST INTEGRITY DURING HARD INGRESS FLAPPING.
+            </div>
+</div>
+<!-- FIGURE 05.C: TAIL LATENCY DISTRIBUTION (LOGARITHMIC) -->
+<div class="bg-surface-container-lowest border border-outline-variant p-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-on-surface-variant mb-1">
+<span>FIG 05.C // TAIL LATENCY SPECTRUM</span>
+<span class="font-mono text-on-surface font-semibold">P50–P99.9 [LOG_10]</span>
+</div>
+<h2 class="font-serif text-2xl text-on-surface mb-1">
+                Tail Latency Cliffs (ms)
+              </h2>
+<p class="font-sans text-xs text-on-surface-variant mb-4">
+                Logarithmic response curve across percentiles. Baseline hits the 30,000ms TCP deadline wall.
+              </p>
+<!-- Inline SVG Distribution Plot: FIG 05.C -->
+<div class="w-full bg-[#F3F0E8] border border-outline-variant p-2.5 mb-4">
+<svg class="w-full h-auto text-on-surface font-mono text-[10px]" preserveaspectratio="xMidYMid meet" viewbox="0 0 400 240">
+<!-- Logarithmic horizontal guides -->
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="45" x2="380" y1="180" y2="180"></line>
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="45" x2="380" y1="130" y2="130"></line>
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="45" x2="380" y1="80" y2="80"></line>
+<line stroke="#D3D0C8" stroke-dasharray="2 2" stroke-width="1" x1="45" x2="380" y1="30" y2="30"></line>
+<!-- Thin black axes -->
+<line stroke="#1C1C17" stroke-width="1" x1="45" x2="45" y1="20" y2="190"></line>
+<line stroke="#1C1C17" stroke-width="1" x1="45" x2="380" y1="190" y2="190"></line>
+<!-- Y-Axis Log Labels -->
+<text fill="#444748" font-size="9" text-anchor="end" x="40" y="183">10ms</text>
+<text fill="#444748" font-size="9" text-anchor="end" x="40" y="133">100ms</text>
+<text fill="#444748" font-size="9" text-anchor="end" x="40" y="83">1,000ms</text>
+<text fill="#444748" font-size="9" text-anchor="end" x="40" y="33">30,000ms</text>
+<!-- X-Axis Percentile Points -->
+<text fill="#444748" font-size="9" text-anchor="middle" x="80" y="206">P50</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="170" y="206">P90</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="260" y="206">P99</text>
+<text fill="#444748" font-size="9" text-anchor="middle" x="350" y="206">P99.9</text>
+<!-- BASELINE TAIL (Shooting up to deadline) -->
+<path d="M 80,155 L 170,84 L 260,30 L 350,30" fill="none" stroke="#1C1C17" stroke-linejoin="round" stroke-width="1.8"></path>
+<circle cx="80" cy="155" fill="#1C1C17" r="3"></circle>
+<circle cx="170" cy="84" fill="#1C1C17" r="3"></circle>
+<circle cx="260" cy="30" fill="#1C1C17" r="3.5"></circle>
+<circle cx="350" cy="30" fill="#1C1C17" r="3.5"></circle>
+<text fill="#BA1A1A" font-size="9" font-weight="600" x="265" y="25">&gt;30,000ms (TIMEOUT)</text>
+<!-- RESILIENT TAIL (Flat and strictly controlled in Electric Blue) -->
+<path d="M 80,174 L 170,160 L 260,144 L 350,134" fill="none" stroke="#2457E8" stroke-linejoin="round" stroke-width="2.2"></path>
+<circle cx="80" cy="174" fill="#2457E8" r="3"></circle>
+<circle cx="170" cy="160" fill="#2457E8" r="3"></circle>
+<circle cx="260" cy="144" fill="#2457E8" r="3"></circle>
+<circle cx="350" cy="134" fill="#2457E8" r="4"></circle>
+<text fill="#2457E8" font-size="9" font-weight="600" text-anchor="middle" x="350" y="122">88.6ms P99.9</text>
+<!-- Annotation -->
+<rect fill="#FCF9F1" height="26" stroke="#2457E8" stroke-width="0.5" width="135" x="90" y="90"></rect>
+<text fill="#2457E8" font-size="8.5" font-weight="600" x="96" y="103">P99.9 BOUND &lt; 90ms</text>
+<text fill="#747878" font-size="7.5" x="96" y="113">FULL 50k REQ/SEC LOAD</text>
+</svg>
+</div>
+<!-- Statistical Metrics Grid -->
+<div class="grid grid-cols-2 gap-2 font-mono text-xs bg-surface-container-low border border-outline-variant p-2.5 mb-2">
+<div>
+<span class="text-on-surface-variant block text-[10px]">BASELINE CLIFF</span>
+<span class="text-on-surface font-semibold">&gt;30,000ms P99</span>
+<span class="text-error block text-[10px]">TCP DEADLINE TRIP</span>
+</div>
+<div class="border-l border-outline-variant pl-2">
+<span class="text-secondary block text-[10px] font-semibold">RESILIENT TAIL</span>
+<span class="text-secondary font-semibold">88.6ms P99.9</span>
+<span class="text-on-surface block text-[10px]">P50 = 14.1ms</span>
+</div>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant font-mono text-[10px] leading-tight text-on-surface-variant">
+              FIG 05.C — EMPIRICAL LATENCY QUANTILE PROGRESSION UNDER 50,000 REQ/SEC SATURATION.
+            </div>
+</div>
+</div>
+</section>
+<!-- STATISTICAL COMPARISON TABLE (BRUTALIST TABULAR DATA MATRIX - NO BULKY CARDS) -->
+<section class="w-full px-6 lg:px-12 py-8 border-b border-outline-variant">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-2 mb-4 pb-2 border-b border-outline-variant">
+<div>
+<div class="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant mb-1">
+              [DATA MATRIX // TABLE 05.1]
+            </div>
+<h2 class="font-serif text-3xl text-on-surface">
+              Two-Sample Nonparametric Hypothesis Tests (N = 120)
+            </h2>
+</div>
+<div class="font-mono text-[11px] text-on-surface-variant text-left md:text-right">
+            METHOD: MANN-WHITNEY U RANK-SUM · TWO-SIDED CONFIDENCE 99.5%
+          </div>
+</div>
+<!-- Clean Sharp Tabular Alignment -->
+<div class="overflow-x-auto border-t border-b border-on-surface">
+<table class="w-full text-left font-mono text-xs border-collapse">
+<thead>
+<tr class="border-b border-outline-variant text-on-surface font-semibold uppercase tracking-wider text-[11px] bg-surface-container-low">
+<th class="py-3 px-4">METRIC DIMENSION</th>
+<th class="py-3 px-4">BASELINE (N=60)<br/><span class="font-normal text-[10px] text-on-surface-variant">[MEDIAN / MEAN ± SD]</span></th>
+<th class="py-3 px-4">RESILIENT SPECIMEN (N=60)<br/><span class="font-normal text-[10px] text-secondary">[MEDIAN / MEAN ± SD]</span></th>
+<th class="py-3 px-4">STATISTICAL DELTA (Δ)</th>
+<th class="py-3 px-4 text-right">P-VALUE / MANN-WHITNEY U</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/60 text-on-surface bg-surface">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-on-surface inline-block"></span>
+                  Mean Time to Recovery (MTTR)
+                </td>
+<td class="py-3 px-4">
+                  141.8s <span class="text-on-surface-variant text-[11px] block">(144.2 ± 22.4s)</span>
+</td>
+<td class="py-3 px-4 text-secondary font-semibold">
+                  4.18s <span class="text-on-surface-variant text-[11px] block font-normal">(4.21 ± 0.41s)</span>
+</td>
+<td class="py-3 px-4 text-secondary font-semibold">
+                  -140.0s (-97.1%)
+                </td>
+<td class="py-3 px-4 text-right font-medium">
+                  p &lt; 0.0001 <span class="text-[10px] text-on-surface-variant block">U = 0.0, Z = -9.42</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/30">
+<td class="py-3 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-on-surface inline-block"></span>
+                  Request Success Rate
+                </td>
+<td class="py-3 px-4">
+                  42.1% <span class="text-on-surface-variant text-[11px] block">(41.8 ± 8.7%)</span>
+</td>
+<td class="py-3 px-4 text-secondary font-semibold">
+                  99.4% <span class="text-on-surface-variant text-[11px] block font-normal">(99.38 ± 0.32%)</span>
+</td>
+<td class="py-3 px-4 text-secondary font-semibold">
+                  +57.3% (Absolute)
+                </td>
+<td class="py-3 px-4 text-right font-medium">
+                  p &lt; 0.0001 <span class="text-[10px] text-on-surface-variant block">U = 0.0, Z = 9.42</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-on-surface inline-block"></span>
+                  P99 Tail Latency
+                </td>
+<td class="py-3 px-4">
+                  &gt;30,000ms <span class="text-error text-[10px] block">(TIMEOUT SATURATION)</span>
+</td>
+<td class="py-3 px-4 text-secondary font-semibold">
+                  88.6ms <span class="text-on-surface-variant text-[11px] block font-normal">(87.9 ± 3.4ms)</span>
+</td>
+<td class="py-3 px-4 text-secondary font-semibold">
+                  -99.7%
+                </td>
+<td class="py-3 px-4 text-right font-medium">
+                  p &lt; 0.0001 <span class="text-[10px] text-on-surface-variant block">U = 2.0, Z = -9.38</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/30">
+<td class="py-3 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-on-surface inline-block"></span>
+                  Failed Request Volume
+                </td>
+<td class="py-3 px-4">
+                  382,410 <span class="text-on-surface-variant text-[11px] block">(384,192 ± 41,200)</span>
+</td>
+<td class="py-3 px-4 text-secondary font-semibold">
+                  2,140 <span class="text-on-surface-variant text-[11px] block font-normal">(2,118 ± 142)</span>
+</td>
+<td class="py-3 px-4 text-secondary font-semibold">
+                  -178x Reduction
+                </td>
+<td class="py-3 px-4 text-right font-medium">
+                  p &lt; 0.0001 <span class="text-[10px] text-on-surface-variant block">U = 0.0, Z = -9.42</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-on-surface inline-block"></span>
+                  Partition Convergence Jitter
+                </td>
+<td class="py-3 px-4">
+                  18.4s ± 6.2s <span class="text-on-surface-variant text-[11px] block">(RANGE: 8.2s–41.0s)</span>
+</td>
+<td class="py-3 px-4 text-secondary font-semibold">
+                  0.12s ± 0.03s <span class="text-on-surface-variant text-[11px] block font-normal">(RANGE: 0.08s–0.21s)</span>
+</td>
+<td class="py-3 px-4 text-secondary font-semibold">
+                  -99.3%
+                </td>
+<td class="py-3 px-4 text-right font-medium">
+                  p &lt; 0.0001 <span class="text-[10px] text-on-surface-variant block">U = 0.0, Z = -9.42</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-2 font-mono text-[11px] text-on-surface-variant">
+<span>NULL HYPOTHESIS H0 REJECTED FOR ALL 5 PRIMARY DIMENSIONS AT ALPHA = 0.005.</span>
+<span class="text-on-surface font-semibold">DATASTORE CHECKSUM: SHA256: 9b2d8e0f11a8c...</span>
+</div>
+</section>
+<!-- FIGURE INDEX & METHODOLOGY ANNOTATIONS -->
+<section class="w-full px-6 lg:px-12 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left 7 cols: Figure Index & Academic Notes -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="font-mono text-xs uppercase tracking-wider text-on-surface font-bold pb-1 border-b border-outline-variant">
+              [05.02] FIGURE INDEX &amp; RESEARCH NOTES
+            </div>
+<div class="space-y-4 font-sans text-sm text-on-surface-variant">
+<div class="p-4 bg-surface-container-low border border-outline-variant">
+<span class="font-mono text-xs text-on-surface font-semibold block mb-1.5">
+                  REF #CR-N120-A · SYNTHETIC KERNEL NOISE &amp; PAGE CACHE INVALIDATION
+                </span>
+<p class="leading-relaxed text-[13px]">
+                  Trials were conducted inside isolated KVM guest partitions with strict cgroup memory limits (4,096 MiB). At \(t=0\), an uncatchable <code class="font-mono text-[11px] bg-surface-container-highest px-1 py-0.5 text-on-surface">SIGKILL</code> was delivered simultaneously to all Raft leader instances while injecting 15% random dropped packets across secondary ingress fabrics to trigger real-world split-brain states.
+                </p>
+</div>
+<div class="p-4 bg-surface-container-low border border-outline-variant">
+<span class="font-mono text-xs text-on-surface font-semibold block mb-1.5">
+                  REF #CR-N120-B · HYPERVISOR ISOLATION INTEGRITY
+                </span>
+<p class="leading-relaxed text-[13px]">
+                  CPU core pinning (NUMA node 0, cores 4–15) ensured that cross-trial contention and L3 cache thrashing did not produce artificial tail latency inflation. Timers sampled using hardware-invariant invariant TSC (<code class="font-mono text-[11px] bg-surface-container-highest px-1 py-0.5 text-on-surface">rdtsc</code>) with sub-nanosecond precision.
+                </p>
+</div>
+</div>
+<!-- Callout Banner with electric blue left edge accent -->
+<div class="p-4 bg-surface-container-low border border-outline-variant border-l-4 border-l-secondary">
+<div class="font-mono text-[11px] uppercase tracking-wider text-secondary font-bold mb-1">
+                DATASET REPRODUCIBILITY GUARANTEE
+              </div>
+<p class="font-mono text-xs text-on-surface leading-normal">
+                DATASET REPRODUCIBILITY NOTE: All figures plotted directly from RFC-7940 deterministic replay logs; zero fabricated smoothing or spline interpolation applied to raw telemetry series.
+              </p>
+</div>
+</div>
+<!-- Right 5 cols: Actions & Cryptographic Manifest -->
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-lowest border border-outline-variant p-6">
+<div>
+<div class="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant mb-1">
+                [DATA DISSEMINATION &amp; ARTIFACTS]
+              </div>
+<h3 class="font-serif text-2xl text-on-surface mb-1">
+                Inspect Raw Replay Vectors
+              </h3>
+<p class="font-sans text-xs text-on-surface-variant mb-6">
+                Download verified telemetry captures for local regression replication using our open-source harness.
+              </p>
+<!-- Sharp Rectangular Action Buttons (0px border-radius) -->
+<div class="flex flex-col gap-2">
+<button class="w-full py-2.5 px-4 bg-inverse-surface text-inverse-on-surface hover:bg-secondary transition-colors text-left flex items-center justify-between font-mono text-xs uppercase tracking-wider" id="btn-csv-download">
+<span>DOWNLOAD RAW CSV (120 TRIALS)</span>
+<span class="text-primary-fixed-dim">[14.8 MB .GZ]</span>
+</button>
+<button class="w-full py-2.5 px-4 bg-surface-container hover:bg-surface-container-highest text-on-surface border border-outline-variant transition-colors text-left flex items-center justify-between font-mono text-xs uppercase tracking-wider" id="btn-manifest-download">
+<span>EXPORT REPRODUCIBILITY MANIFEST (SHA256)</span>
+<span class="material-symbols-outlined text-sm">verified</span>
+</button>
+<button class="w-full py-2.5 px-4 bg-surface-container hover:bg-surface-container-highest text-on-surface border border-outline-variant transition-colors text-left flex items-center justify-between font-mono text-xs uppercase tracking-wider" id="btn-citation-copy">
+<span>DOWNLOAD APA / IEEE CITATION</span>
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Cryptographic Hash Verification Box -->
+<div class="mt-6 p-3.5 bg-surface-container-low border border-outline-variant font-mono text-xs text-on-surface-variant">
+<div class="flex items-center justify-between text-on-surface font-semibold mb-1">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-secondary inline-block"></span>
+                  CRYPTO PROVENANCE VERIFY
+                </span>
+<span class="text-secondary text-[10px]">RFC-3161 TIMESTAMPED</span>
+</div>
+<div class="text-[11px] break-all mb-1.5 font-mono text-on-surface bg-white/70 p-1.5 border border-outline-variant/50">
+                SHA256: e8d4f09a3c771b9542df984b5c7774e0d42125bb2a4a754ec836dc225141029c
+              </div>
+<div class="flex justify-between items-center text-[10px] text-on-surface-variant">
+<span>PKEY: 0x48FA901844B7 [BERN DEPOT]</span>
+<span class="text-on-surface font-semibold">SIG: VALID</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE TOAST POPUP NOTIFICATION CONTAINER -->
+<div class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 font-mono text-xs uppercase tracking-wider transition-opacity duration-200 opacity-0 pointer-events-none z-50 flex items-center gap-2 border border-outline-variant shadow-lg" id="toast-notify">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+<span id="toast-message">MANIFEST CLIPBOARD SYNCED</span>
+</div>
+</div>
+</main>
+<!-- ARCHIVAL COLOPHON FOOTER (BRUTALIST SWISS MONOGRAPH) -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant py-10 mt-12 font-mono">
+<div class="w-full px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-8 pb-8 border-b border-outline-variant">
+<div class="lg:col-span-4">
+<div class="text-xs uppercase tracking-wider text-on-surface font-bold mb-2">CLOUDRESCUE COLOPHON</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed max-w-sm">
+            Standardized Swiss archival documentation of distributed state reconstruction, deterministic failover protocols, and high-tempo disaster mitigation topologies.
+          </p>
+</div>
+<div class="lg:col-span-3">
+<div class="text-[11px] uppercase tracking-wider text-on-surface font-semibold mb-2">BIBLIOGRAPHIC INDEX</div>
+<ul class="text-[11px] text-on-surface-variant space-y-1">
+<li>ISSN: 2940-1182 (PRINT)</li>
+<li>ISSN: 2940-1190 (ONLINE)</li>
+<li>DOI: 10.1084/CR.2026.04.REC</li>
+<li>DEPOT: ZURICH ARCHIVE REF #448</li>
+</ul>
+</div>
+<div class="lg:col-span-3">
+<div class="text-[11px] uppercase tracking-wider text-on-surface font-semibold mb-2">GRID COORDINATES &amp; NODE</div>
+<ul class="text-[11px] text-on-surface-variant space-y-1">
+<li>SYS.ORIGIN: 47.3769° N, 8.5417° E</li>
+<li>TOPOLOGY: AS-64496 / MULTI-REGION</li>
+<li>SUBSTRATE: MONOCHROME PLANAR [V4]</li>
+<li>CALIBRATION: BROCKMANN-12-COL</li>
+</ul>
+</div>
+<div class="lg:col-span-2 flex flex-col justify-between items-start md:items-end">
+<div class="text-[11px] text-on-surface-variant text-left md:text-right">
+            STATUS: NOMINAL<br/>LATENCY: 1.24 MS
+          </div>
+<span class="text-[10px] uppercase tracking-widest px-2 py-0.5 border border-outline-variant text-on-surface mt-3 font-semibold">
+            SECTION [00–07]
+          </span>
+</div>
+</div>
+<div class="pt-4 flex flex-col md:flex-row items-baseline justify-between gap-2 text-[10px] text-on-surface-variant">
+<div>© 2026 CLOUDRESCUE INQUIRY GROUP. ALL RIGHTS RESERVED. ARCHIVAL RECORD PRESERVED UNDER OPEN RECONSTRUCTION LICENSE.</div>
+<div class="text-right">PAGE TEMPLATE [SWISS_MODERN_REV_04]</div>
+</div>
+</div>
+</footer>
+<!-- CLIENT-SIDE INTERACTION SCRIPT -->
+<script>
+    (function() {
+      const toast = document.getElementById('toast-notify');
+      const toastMsg = document.getElementById('toast-message');
+
+      function showToast(text) {
+        if (!toast || !toastMsg) return;
+        toastMsg.textContent = text;
+        toast.classList.remove('opacity-0', 'pointer-events-none');
+        toast.classList.add('opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100');
+          toast.classList.add('opacity-0', 'pointer-events-none');
+        }, 3200);
+      }
+
+      const btnCsv = document.getElementById('btn-csv-download');
+      if (btnCsv) {
+        btnCsv.addEventListener('click', function(e) {
+          e.preventDefault();
+          showToast('STREAMING RAW TELEMETRY ARCHIVE: #EXP-7729.CSV.GZ');
+        });
+      }
+
+      const btnManifest = document.getElementById('btn-manifest-download');
+      if (btnManifest) {
+        btnManifest.addEventListener('click', function(e) {
+          e.preventDefault();
+          showToast('EXPORTED SHA256 REPRODUCIBILITY MANIFEST');
+        });
+      }
+
+      const btnCite = document.getElementById('btn-citation-copy');
+      if (btnCite) {
+        btnCite.addEventListener('click', function(e) {
+          e.preventDefault();
+          navigator.clipboard.writeText('CloudRescue Inquiry Group. (2026). Empirical Distribution Assay of Stochastic Partition Cascades (Vol. 04, Rep. No. EXP-7729-OMEGA). Zurich Archive.')
+            .then(() => showToast('APA/IEEE BIBTEX CITATION COPIED TO CLIPBOARD'))
+            .catch(() => showToast('CITATION COPIED TO BUFFER'));
+        });
+      }
+    })();
+  </script>
+</body></html>

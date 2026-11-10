@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>CloudRescue — Architectural Resilience Inquiry</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F4F1EA',
+            'paper-light': '#F7F5EE',
+            'paper-dark': '#ECE7DE',
+            ink: '#141517',
+            'ink-muted': '#5D6066',
+            'ink-subtle': '#8C9099',
+            'border-hairline': '#D8D4CA',
+            electric: '#2457E8',
+          },
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #F4F1EA;
+        color: #141517;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::selection {
+      background-color: #2457E8;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body class="bg-paper font-sans text-ink antialiased">
+<!-- Minimal Restrained Swiss Masthead -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-paper/95 backdrop-blur-sm border-b border-border-hairline">
+<div class="h-16 w-full px-6 lg:px-12 flex items-center justify-between gap-6">
+<!-- Brandmark & Subtle Edition Badge -->
+<div class="flex items-center gap-4">
+<a class="font-mono text-sm tracking-[0.2em] uppercase font-semibold text-ink hover:text-electric transition-colors" data-path="overview" href="#">
+          CLOUDRESCUE
+        </a>
+<span class="hidden sm:inline-block font-mono text-[11px] text-ink-subtle uppercase tracking-widest pl-3 border-l border-border-hairline">
+          SYS.VER 4.2 · ISSUE 2026
+        </span>
+</div>
+<!-- Inline Navigation Items -->
+<nav class="hidden xl:flex items-center gap-7 h-full text-[12px] font-mono tracking-wider uppercase">
+<a aria-current="page" class="h-full flex items-center text-electric border-b-2 border-electric font-medium" data-path="overview" href="#">
+          01 Overview
+        </a>
+<a class="h-full flex items-center text-ink-muted hover:text-ink transition-colors border-b-2 border-transparent" data-path="inquiry" href="#">
+          02 Inquiry
+        </a>
+<a class="h-full flex items-center text-ink-muted hover:text-ink transition-colors border-b-2 border-transparent" data-path="simulator" href="#">
+          03 Simulator
+        </a>
+<a class="h-full flex items-center text-ink-muted hover:text-ink transition-colors border-b-2 border-transparent" data-path="benchmark" href="#">
+          04 Benchmark
+        </a>
+<a class="h-full flex items-center text-ink-muted hover:text-ink transition-colors border-b-2 border-transparent" data-path="analytics" href="#">
+          05 Analytics
+        </a>
+<a class="h-full flex items-center text-ink-muted hover:text-ink transition-colors border-b-2 border-transparent" data-path="methodology" href="#">
+          06 Methodology
+        </a>
+<a class="h-full flex items-center text-ink-muted hover:text-ink transition-colors border-b-2 border-transparent" data-path="publication" href="#">
+          07 Publication
+        </a>
+</nav>
+<!-- Action Button -->
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center justify-center px-4 py-2 bg-ink text-paper text-xs font-mono tracking-widest uppercase hover:bg-electric focus:outline-none focus:ring-2 focus:ring-electric transition-all" data-path="simulator" href="#">
+          [ INITIALIZE SIMULATOR → ]
+        </a>
+</div>
+</div>
+</header>
+<!-- Main Editorial Content -->
+<main class="w-full pt-16 min-h-[calc(100vh-14rem)]">
+<div class="w-full px-6 lg:px-12 py-10 lg:py-16">
+<!-- Monograph Metadata Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 border-b border-border-hairline font-mono text-[11px] uppercase tracking-wider text-ink-muted">
+<div class="flex items-center gap-2">
+<span class="inline-block w-1.5 h-1.5 bg-electric"></span>
+<span class="font-semibold text-ink">MONOGRAPH REF. CR-2026-A</span>
+<span class="text-ink-subtle">/</span>
+<span>DISTRIBUTED RESILIENCE LABS</span>
+</div>
+<div class="flex items-center gap-4 text-ink-subtle">
+<span>SWISS ARCHIVAL RECONSTRUCTION</span>
+<span>FOLIO 01 / 18</span>
+</div>
+</div>
+<!-- Asymmetric Editorial Hero Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 pt-10 lg:pt-14 items-start">
+<!-- Left Column: Typography & Intent (7 cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between">
+<div class="space-y-8">
+<div class="font-mono text-xs uppercase tracking-[0.25em] text-electric font-semibold">
+              FIELD RESEARCH &amp; ARCHITECTURAL INQUIRY
+            </div>
+<h1 class="font-serif text-5xl sm:text-6xl lg:text-[5.25rem] leading-[0.98] tracking-tight text-ink">
+              What happens when your cloud <span class="italic font-normal">fails?</span>
+</h1>
+<p class="text-base lg:text-lg text-ink-muted font-light leading-relaxed max-w-xl">
+              One service failure can irrevocably cascade into critical infrastructure paralysis. An empirical investigation into distributed fault tolerance, deterministic failover kinetics, and architectural recovery under catastrophic partition load.
+            </p>
+</div>
+<!-- Execution Bar & Primary Action -->
+<div class="mt-10 lg:mt-14 pt-8 pb-10 flex flex-col sm:flex-row sm:items-center gap-6 border-b border-border-hairline">
+<a class="inline-flex items-center justify-between gap-4 px-6 py-3.5 bg-ink text-paper font-mono text-xs uppercase tracking-widest hover:bg-electric focus:ring-2 focus:ring-electric transition-colors group" href="#">
+<span>Explore the experiment</span>
+<span class="font-mono transition-transform group-hover:translate-x-1">→</span>
+</a>
+<div class="flex flex-col font-mono text-xs text-ink-muted leading-tight">
+<span class="text-ink font-medium">ESTIMATED RUNTIME: ~180S</span>
+<span class="text-[11px] text-ink-subtle mt-0.5">PEER-REVIEWED EMPIRICAL TRACE RUN</span>
+</div>
+</div>
+<!-- 3-Chapter Asymmetric Typographic Narrative -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10">
+<div class="space-y-2">
+<div class="font-serif text-3xl text-ink font-light leading-none">01</div>
+<div class="font-mono text-xs uppercase tracking-wider text-ink font-medium pt-1">
+                Simulate Failure
+              </div>
+<p class="text-xs text-ink-muted leading-relaxed font-light">
+                Induce synthetic anomaly vectors in unbuffered topologies across geo-replicated state stores.
+              </p>
+</div>
+<div class="space-y-2">
+<div class="font-serif text-3xl text-ink font-light leading-none">02</div>
+<div class="font-mono text-xs uppercase tracking-wider text-ink font-medium pt-1">
+                Test Resilience
+              </div>
+<p class="text-xs text-ink-muted leading-relaxed font-light">
+                Evaluate autonomous circuit breakers, backpressure valves, and quorum consensus failover.
+              </p>
+</div>
+<div class="space-y-2">
+<div class="font-serif text-3xl text-ink font-light leading-none">03</div>
+<div class="font-mono text-xs uppercase tracking-wider text-ink font-medium pt-1">
+                Measure Recovery
+              </div>
+<p class="text-xs text-ink-muted leading-relaxed font-light">
+                Quantify availability cliffs, p99 tail-latency deltas, and deterministic MTTR thresholds.
+              </p>
+</div>
+</div>
+</div>
+<!-- Right Column: Brutalist Photographic Plate (5 cols) -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="relative bg-paper-dark border border-border-hairline p-1">
+<div class="relative overflow-hidden aspect-[4/5] bg-black">
+<img alt="Brutalist high-density data center server room corridor with concrete columns and overhead cable trays" class="w-full h-full object-cover grayscale contrast-125 brightness-95" src="https://lh3.googleusercontent.com/aida/AEtjO1VL6taYVAA7XPwCw0HGbF5oWdmDtOCzoY4NaJJELliCzsaVdBFVdWkHvpKp3zh9SmxI45cQlbRF95E_hn7Txev5liX_AXMOQB9QfwmPeW-nkKrnRxwNmrQ5NTkQVp_fS6QFNcjX0gY5JuYAYNpb8O1o5VE5GnwOfe9HYHF87DmSpnWSbXv25-F_-XRKRtgbwhk2O4lmB44WKQYJdCzp82l_YdzrNZGiyZAl6Cpd1LVB"/>
+<!-- Minimal SVG Crosshair Reticle & Electric Blue Annotation -->
+<div class="absolute inset-0 pointer-events-none p-4 flex flex-col justify-between font-mono text-[11px]">
+<!-- Plate Header Coordinates -->
+<div class="flex items-center justify-between text-paper bg-ink/80 px-2 py-1 border border-ink">
+<span>RACK_CORRIDOR // AZ-WEST-4B</span>
+<span class="text-electric font-semibold">T=14.2s</span>
+</div>
+<!-- Single High-Precision Crosshair Callout -->
+<div class="relative self-center my-auto -translate-x-6 translate-y-8">
+<!-- SVG Crosshair -->
+<svg class="w-8 h-8 text-electric" fill="none" stroke="currentColor" stroke-width="1.25" viewbox="0 0 32 32">
+<circle cx="16" cy="16" r="6"></circle>
+<line x1="16" x2="16" y1="2" y2="10"></line>
+<line x1="16" x2="16" y1="22" y2="30"></line>
+<line x1="2" x2="10" y1="16" y2="16"></line>
+<line x1="22" x2="30" y1="16" y2="16"></line>
+</svg>
+<!-- Precision Label -->
+<div class="absolute left-10 -top-2 whitespace-nowrap bg-ink text-paper px-2.5 py-1 text-[11px] border-l-2 border-electric shadow-sm">
+<span class="text-electric font-semibold">AZ-1 PARTITION SEVER</span>
+<span class="text-ink-subtle ml-1">· t=14.2s</span>
+</div>
+</div>
+<!-- Bottom Telemetry Status Bar -->
+<div class="flex items-center justify-between bg-ink/90 text-paper px-2 py-1 text-[10px] tracking-wider uppercase border border-ink">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-electric animate-pulse"></span>
+                    TELEMETRY: RECORDING
+                  </span>
+<span class="text-ink-subtle">HASH: 0x94F2B7</span>
+</div>
+</div>
+</div>
+<!-- Micro Frame Baseline -->
+<div class="flex items-center justify-between px-2 py-1 font-mono text-[10px] uppercase text-ink-muted bg-paper-dark border-t border-border-hairline mt-1">
+<span>PLATE 01.A — SUBTERRANEAN TEST RIG</span>
+<span class="text-ink font-semibold">ZURICH SECTOR</span>
+</div>
+</div>
+<!-- Academic Figure Caption -->
+<div class="mt-3 flex items-start gap-2.5 font-mono text-[11px] text-ink-muted leading-relaxed">
+<span class="text-ink font-semibold uppercase shrink-0">FIG. 1.0 —</span>
+<p>
+              High-density server topology during synthetic unmitigated partition test. Tier-IV subterranean research facility, Zurich-North Sector.
+            </p>
+</div>
+</div>
+</div>
+<!-- Tabular Baseline Metric Strip / Specification Bar -->
+<div class="mt-16 pt-10 border-t border-border-hairline">
+<div class="flex flex-col md:flex-row items-baseline justify-between mb-6">
+<div class="font-mono text-xs uppercase tracking-widest text-ink font-semibold">
+            [ SYSTEM SPECIFICATION &amp; RECOVERY TARGETS ]
+          </div>
+<div class="font-mono text-[11px] text-ink-subtle uppercase mt-1 md:mt-0">
+            VALIDATED AGAINST ISO/IEC 25010 STANDARDS
+          </div>
+</div>
+<!-- 4-Column Clean Tabular Matrix with Hairline Separation -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-y border-border-hairline divide-y sm:divide-y-0 sm:divide-x divide-border-hairline bg-paper-light">
+<div class="p-6">
+<div class="font-mono text-[11px] text-ink-muted uppercase tracking-wider">
+              Failover Latency
+            </div>
+<div class="font-serif text-4xl text-ink mt-2 leading-none">
+              1.84<span class="text-xl font-sans ml-1 text-ink-muted">s</span>
+</div>
+<div class="font-mono text-[11px] text-electric mt-2">
+              Δ -84% vs Unbuffered Baseline
+            </div>
+</div>
+<div class="p-6">
+<div class="font-mono text-[11px] text-ink-muted uppercase tracking-wider">
+              Split-Brain Risk
+            </div>
+<div class="font-serif text-4xl text-ink mt-2 leading-none">
+              0.00<span class="text-xl font-sans ml-1 text-ink-muted">%</span>
+</div>
+<div class="font-mono text-[11px] text-ink-muted mt-2">
+              Raft Quorum Validated
+            </div>
+</div>
+<div class="p-6">
+<div class="font-mono text-[11px] text-ink-muted uppercase tracking-wider">
+              Recovery Vector
+            </div>
+<div class="font-serif text-4xl text-ink mt-2 leading-none">
+              4-Tier<span class="text-base font-sans ml-1 text-ink-muted">Shard</span>
+</div>
+<div class="font-mono text-[11px] text-ink-muted mt-2">
+              Deterministic Partition Route
+            </div>
+</div>
+<div class="p-6">
+<div class="font-mono text-[11px] text-ink-muted uppercase tracking-wider">
+              State Parity
+            </div>
+<div class="font-serif text-4xl text-ink mt-2 leading-none">
+              100.0<span class="text-xl font-sans ml-1 text-ink-muted">%</span>
+</div>
+<div class="font-mono text-[11px] text-electric mt-2">
+              Zero State Loss · RPO = 0
+            </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Editorial Colophon Footer -->
+<footer class="w-full bg-paper border-t border-border-hairline py-12">
+<div class="w-full px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-8 pb-10 border-b border-border-hairline font-mono text-[11px] text-ink-muted leading-relaxed">
+<div class="lg:col-span-4 space-y-2">
+<div class="text-ink font-semibold tracking-wider uppercase">
+            CLOUDRESCUE COLOPHON
+          </div>
+<p class="max-w-sm">
+            Archival documentation of distributed state reconstruction, deterministic failover protocols, and high-tempo disaster mitigation topologies.
+          </p>
+</div>
+<div class="lg:col-span-3 space-y-1.5">
+<div class="text-ink font-semibold tracking-wider uppercase mb-1">
+            BIBLIOGRAPHIC INDEX
+          </div>
+<div>ISSN: 2940-1182 (PRINT)</div>
+<div>ISSN: 2940-1190 (ONLINE)</div>
+<div>DOI: 10.1084/CR.2026.04.REC</div>
+<div>ARCHIVE DEPOT: ZURICH REF #448</div>
+</div>
+<div class="lg:col-span-3 space-y-1.5">
+<div class="text-ink font-semibold tracking-wider uppercase mb-1">
+            SYSTEM COORDINATES
+          </div>
+<div>ORIGIN: 47.3769° N, 8.5417° E</div>
+<div>TOPOLOGY: AS-64496 / MULTI-REGION</div>
+<div>GRID: BROCKMANN-12-COL RATIO</div>
+<div>TYPEFACE: INSTRUMENT SERIF / GEIST</div>
+</div>
+<div class="lg:col-span-2 flex flex-col justify-between items-start md:items-end">
+<div class="text-left md:text-right">
+            STATUS: NOMINAL<br/>
+            LATENCY: 1.24 MS
+          </div>
+<span class="inline-block mt-4 px-2 py-0.5 border border-border-hairline text-ink">
+            SECTION [01]
+          </span>
+</div>
+</div>
+<div class="pt-6 flex flex-col sm:flex-row items-baseline justify-between gap-4 font-mono text-[10px] uppercase text-ink-subtle">
+<div>
+          © 2026 CLOUDRESCUE INQUIRY GROUP. PRESERVED UNDER OPEN RECONSTRUCTION LICENSE.
+        </div>
+<div>
+          EDITION VARIANT A — BRUTALIST SWISS MONOGRAPH
+        </div>
+</div>
+</div>
+</footer>
+</body></html>

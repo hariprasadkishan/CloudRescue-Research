@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F4F1EA;
+  --color-paper-light: #F7F5EE;
+  --color-paper-dark: #ECE7DE;
+  --color-ink: #141517;
+  --color-ink-muted: #5D6066;
+  --color-ink-subtle: #8C9099;
+  --color-border-hairline: #D8D4CA;
+  --color-electric: #2457E8;
+  --color-cinnabar: #D94A45;
+  --color-emerald: #24845A;
+  --color-amber: #F0A14A;
+
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #F4F1EA;
+    color: #141517;
+    font-family: var(--font-sans);
+  }
+}
+
+::selection {
+  background-color: #2457E8;
+  color: #FFFFFF;
+}
+
+/* Custom hairline borders and brutalist utilities */
+.hairline-border {
+  border: 1px solid #D8D4CA;
+}
+
+.hairline-border-b {
+  border-bottom: 1px solid #D8D4CA;
+}
+
+.hairline-border-t {
+  border-top: 1px solid #D8D4CA;
+}
+
+.hairline-border-l {
+  border-left: 1px solid #D8D4CA;
+}
+
+.hairline-border-r {
+  border-right: 1px solid #D8D4CA;
+}

@@ -1,0 +1,60 @@
+{
+  "validation_metadata": {
+    "status": "PRELIMINARY_BROWNOUT_VALIDATION",
+    "note": "Phase 2 validation artifact. NOT final experimental research results.",
+    "timestamp": "2026-10-30T20:06:24.540155+00:00",
+    "python_version": "3.14.7 (main, Aug 10 2026, 00:00:00) [GCC 16.1.1 20260515 (Red Hat 16.1.1-2)]",
+    "seed": 42,
+    "sim_time_s": 20.0,
+    "warmup_s": 2.0
+  },
+  "metrics": {
+    "n_submitted": 1434,
+    "n_success": 1380,
+    "drop_queue_count": 0,
+    "drop_timeout_count": 9,
+    "crash_failed_count": 0,
+    "lat_violations_count": 326,
+    "sr_percent": 96.23,
+    "v_lat_percent": 23.62,
+    "v_overall_percent": 23.36,
+    "mean_latency_ms": 69.93,
+    "p50_latency_ms": 60.88,
+    "p95_latency_ms": 159.22,
+    "p99_latency_ms": 187.16,
+    "fidelity_percent": 90.0,
+    "mean_dimmer": 0.8971,
+    "per_worker_theta": {
+      "0": 0.8828,
+      "1": 0.9103,
+      "2": 0.8911,
+      "3": 0.9041
+    },
+    "jains_fairness_index": 0.9508,
+    "jains_fairness_index_all_workers": 0.9511,
+    "active_workers_fairness": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "fairness_population_type": "strict_zero_downtime",
+    "fairness_status": "evaluable",
+    "legacy_fairness_status": "evaluable",
+    "post_warmup_worker_counts": {
+      "0": 432,
+      "1": 397,
+      "2": 324,
+      "3": 227
+    }
+  },
+  "worker_utilizations": {
+    "0": 95.99,
+    "1": 85.25,
+    "2": 70.27,
+    "3": 50.51
+  },
+  "mean_utilization": 75.5,
+  "jains_fairness_index": 0.9508,
+  "total_generated_requests": 1598
+}

@@ -1,0 +1,40 @@
+{
+  "num_workers": 4,
+  "queue_capacity": 50,
+  "mu_mand": 0.1,
+  "mu_opt": 0.03333333333333333,
+  "timeout_ms": 200.0,
+  "sla_threshold_ms": 100.0,
+  "target_latency_ms": 80.0,
+  "lambda_nom": 0.08,
+  "lambda_burst": 0.24,
+  "burst_start_ms": 300000.0,
+  "burst_duration_ms": 150000.0,
+  "sim_time_ms": 1000000.0,
+  "warmup_ms": 100000.0,
+  "seed": 1008,
+  "fail_schedules": [
+    {
+      "worker_ids": [
+        1,
+        2
+      ],
+      "t_fail": 300000.0,
+      "t_repair": 450000.0
+    }
+  ],
+  "mode": "CFG-A",
+  "enable_brownout": false,
+  "ctrl_interval_ms": 1000.0,
+  "n_min_ctrl": 5,
+  "delta_stall": 0.05,
+  "kp": 0.5,
+  "ki": 0.1,
+  "theta_min": 0.0,
+  "theta_max": 1.0,
+  "routing_policy": "JSQ",
+  "balb_alpha": 1.0,
+  "balb_beta": 1.0,
+  "balb_gamma": 0.5,
+  "q_soft_ratio": 0.8
+}

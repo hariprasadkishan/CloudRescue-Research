@@ -1,0 +1,71 @@
+{
+  "scenario": "nominal",
+  "config": "CFG-C",
+  "seed": 1016,
+  "metrics": {
+    "n_submitted": 72258,
+    "n_success": 72118,
+    "drop_queue_count": 0,
+    "drop_timeout_count": 52,
+    "crash_failed_count": 0,
+    "lat_violations_count": 2134,
+    "sr_percent": 99.81,
+    "v_lat_percent": 2.96,
+    "v_overall_percent": 3.03,
+    "mean_latency_ms": 26.61,
+    "p50_latency_ms": 17.71,
+    "p95_latency_ms": 83.37,
+    "p99_latency_ms": 132.3,
+    "fidelity_percent": 11.37,
+    "mean_dimmer": 0.0772,
+    "per_worker_theta": {
+      "0": 0.0905,
+      "1": 0.0666,
+      "2": 0.0941,
+      "3": 0.0577
+    },
+    "jains_fairness_index": 0.9906,
+    "jains_fairness_index_all_workers": 0.9933,
+    "active_workers_fairness": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "fairness_population_type": "strict_zero_downtime",
+    "fairness_status": "evaluable",
+    "legacy_fairness_status": "evaluable",
+    "post_warmup_worker_counts": {
+      "0": 15242,
+      "1": 17889,
+      "2": 19143,
+      "3": 19844
+    }
+  },
+  "worker_utilizations": {
+    "0": 28.06,
+    "1": 28.55,
+    "2": 31.95,
+    "3": 30.71
+  },
+  "mean_utilization": 29.82,
+  "jains_fairness_index": 0.9906,
+  "jains_fairness_index_all_workers": 0.9933,
+  "fairness_population_type": "strict_zero_downtime",
+  "fairness_status": "evaluable",
+  "active_workers_fairness": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "recovery_metrics": {
+    "t_adapt_s": null,
+    "t_adapt_recovered": true,
+    "t_restore_s": null,
+    "t_restore_recovered": true,
+    "notes": "Nominal scenario (no stress injected)"
+  },
+  "runtime_s": 12.15,
+  "completed_at_utc": "2026-10-30T21:14:17.994220+00:00"
+}

@@ -1,0 +1,376 @@
+2026-10-31 02:42:43,972 [INFO] =========================================================================
+2026-10-31 02:42:43,972 [INFO]         CloudRescue — Phase 4 Master Experiment Matrix Runner            
+2026-10-31 02:42:43,972 [INFO] =========================================================================
+2026-10-31 02:42:43,973 [INFO] Target Runs:    360 (Scenarios: 4, Configs: 3, Seeds: 30)
+2026-10-31 02:42:43,973 [INFO] Parallelism:    7 worker processes
+2026-10-31 02:42:43,973 [INFO] Output Base:    /home/andesindica/Downloads/CloudRescue-Research/results/experiment_360
+2026-10-31 02:42:43,973 [INFO] Save All Events: False (Default: seed 1001 reference runs only)
+2026-10-31 02:42:43,973 [INFO] -------------------------------------------------------------------------
+2026-10-31 02:42:43,973 [INFO] Launching 360 simulation jobs...
+2026-10-31 02:42:47,273 [INFO] [  1/360] (  0.3%) Scenario: nominal          | Config: CFG-A | Seed: 1004 | Sr:  96.0% | V_lat:  26.5% | V_ovr:  26.3% | Time:  2.9s
+2026-10-31 02:42:48,389 [INFO] [  2/360] (  0.6%) Scenario: nominal          | Config: CFG-A | Seed: 1005 | Sr:  95.9% | V_lat:  26.8% | V_ovr:  26.6% | Time:  4.0s
+2026-10-31 02:42:48,937 [INFO] [  3/360] (  0.8%) Scenario: nominal          | Config: CFG-A | Seed: 1007 | Sr:  96.0% | V_lat:  26.1% | V_ovr:  25.9% | Time:  4.5s
+2026-10-31 02:42:48,985 [INFO] [  4/360] (  1.1%) Scenario: nominal          | Config: CFG-A | Seed: 1003 | Sr:  96.2% | V_lat:  26.5% | V_ovr:  26.2% | Time:  4.5s
+2026-10-31 02:42:49,010 [INFO] [  5/360] (  1.4%) Scenario: nominal          | Config: CFG-A | Seed: 1006 | Sr:  96.1% | V_lat:  26.8% | V_ovr:  26.7% | Time:  4.6s
+2026-10-31 02:42:49,103 [INFO] [  6/360] (  1.7%) Scenario: nominal          | Config: CFG-A | Seed: 1002 | Sr:  96.2% | V_lat:  26.1% | V_ovr:  25.9% | Time:  4.7s
+2026-10-31 02:42:52,184 [INFO] [  7/360] (  1.9%) Scenario: nominal          | Config: CFG-A | Seed: 1008 | Sr:  96.0% | V_lat:  27.0% | V_ovr:  26.9% | Time:  4.8s
+2026-10-31 02:42:52,662 [INFO] [  8/360] (  2.2%) Scenario: nominal          | Config: CFG-A | Seed: 1009 | Sr:  96.0% | V_lat:  26.6% | V_ovr:  26.4% | Time:  4.2s
+2026-10-31 02:42:53,319 [INFO] [  9/360] (  2.5%) Scenario: nominal          | Config: CFG-A | Seed: 1013 | Sr:  96.2% | V_lat:  26.5% | V_ovr:  26.4% | Time:  4.1s
+2026-10-31 02:42:53,544 [INFO] [ 10/360] (  2.8%) Scenario: nominal          | Config: CFG-A | Seed: 1010 | Sr:  96.2% | V_lat:  26.2% | V_ovr:  26.0% | Time:  4.5s
+2026-10-31 02:42:53,687 [INFO] [ 11/360] (  3.1%) Scenario: nominal          | Config: CFG-A | Seed: 1012 | Sr:  96.0% | V_lat:  27.7% | V_ovr:  27.5% | Time:  4.6s
+2026-10-31 02:42:53,702 [INFO] [ 12/360] (  3.3%) Scenario: nominal          | Config: CFG-A | Seed: 1011 | Sr:  95.9% | V_lat:  26.5% | V_ovr:  26.3% | Time:  4.6s
+2026-10-31 02:42:56,462 [INFO] [ 13/360] (  3.6%) Scenario: nominal          | Config: CFG-A | Seed: 1014 | Sr:  96.4% | V_lat:  26.3% | V_ovr:  26.1% | Time:  4.2s
+2026-10-31 02:42:56,993 [INFO] [ 14/360] (  3.9%) Scenario: nominal          | Config: CFG-A | Seed: 1015 | Sr:  95.8% | V_lat:  26.7% | V_ovr:  26.6% | Time:  4.2s
+2026-10-31 02:42:57,089 [INFO] [ 15/360] (  4.2%) Scenario: nominal          | Config: CFG-A | Seed: 1001 | Sr:  96.2% | V_lat:  27.1% | V_ovr:  26.9% | Time:  4.3s
+2026-10-31 02:42:57,389 [INFO] [ 16/360] (  4.4%) Scenario: nominal          | Config: CFG-A | Seed: 1017 | Sr:  96.6% | V_lat:  26.0% | V_ovr:  25.8% | Time:  3.8s
+2026-10-31 02:42:57,599 [INFO] [ 17/360] (  4.7%) Scenario: nominal          | Config: CFG-A | Seed: 1016 | Sr:  96.0% | V_lat:  26.8% | V_ovr:  26.6% | Time:  4.1s
+2026-10-31 02:42:58,242 [INFO] [ 18/360] (  5.0%) Scenario: nominal          | Config: CFG-A | Seed: 1018 | Sr:  95.9% | V_lat:  27.1% | V_ovr:  26.9% | Time:  4.5s
+2026-10-31 02:42:58,452 [INFO] [ 19/360] (  5.3%) Scenario: nominal          | Config: CFG-A | Seed: 1019 | Sr:  96.0% | V_lat:  26.8% | V_ovr:  26.6% | Time:  4.7s
+2026-10-31 02:43:00,718 [INFO] [ 20/360] (  5.6%) Scenario: nominal          | Config: CFG-A | Seed: 1020 | Sr:  95.9% | V_lat:  26.5% | V_ovr:  26.4% | Time:  3.9s
+2026-10-31 02:43:01,027 [INFO] [ 21/360] (  5.8%) Scenario: nominal          | Config: CFG-A | Seed: 1022 | Sr:  96.2% | V_lat:  26.7% | V_ovr:  26.5% | Time:  3.9s
+2026-10-31 02:43:01,551 [INFO] [ 22/360] (  6.1%) Scenario: nominal          | Config: CFG-A | Seed: 1021 | Sr:  96.3% | V_lat:  26.9% | V_ovr:  26.7% | Time:  4.4s
+2026-10-31 02:43:01,895 [INFO] [ 23/360] (  6.4%) Scenario: nominal          | Config: CFG-A | Seed: 1023 | Sr:  95.6% | V_lat:  26.7% | V_ovr:  26.5% | Time:  4.1s
+2026-10-31 02:43:02,057 [INFO] [ 24/360] (  6.7%) Scenario: nominal          | Config: CFG-A | Seed: 1024 | Sr:  96.3% | V_lat:  27.2% | V_ovr:  27.0% | Time:  4.1s
+2026-10-31 02:43:02,737 [INFO] [ 25/360] (  6.9%) Scenario: nominal          | Config: CFG-A | Seed: 1025 | Sr:  95.9% | V_lat:  27.0% | V_ovr:  26.8% | Time:  4.4s
+2026-10-31 02:43:02,886 [INFO] [ 26/360] (  7.2%) Scenario: nominal          | Config: CFG-A | Seed: 1026 | Sr:  96.3% | V_lat:  26.6% | V_ovr:  26.4% | Time:  4.1s
+2026-10-31 02:43:05,035 [INFO] [ 27/360] (  7.5%) Scenario: nominal          | Config: CFG-A | Seed: 1027 | Sr:  96.2% | V_lat:  27.0% | V_ovr:  26.8% | Time:  3.9s
+2026-10-31 02:43:06,296 [INFO] [ 28/360] (  7.8%) Scenario: nominal          | Config: CFG-A | Seed: 1029 | Sr:  95.8% | V_lat:  27.3% | V_ovr:  27.1% | Time:  4.4s
+2026-10-31 02:43:06,363 [INFO] [ 29/360] (  8.1%) Scenario: nominal          | Config: CFG-A | Seed: 1028 | Sr:  96.3% | V_lat:  26.6% | V_ovr:  26.4% | Time:  5.3s
+2026-10-31 02:43:06,788 [INFO] [ 30/360] (  8.3%) Scenario: nominal          | Config: CFG-A | Seed: 1030 | Sr:  96.0% | V_lat:  27.1% | V_ovr:  26.9% | Time:  4.8s
+2026-10-31 02:43:09,475 [INFO] [ 31/360] (  8.6%) Scenario: nominal          | Config: CFG-B | Seed: 1003 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.8% | Time:  6.4s
+2026-10-31 02:43:09,663 [INFO] [ 32/360] (  8.9%) Scenario: nominal          | Config: CFG-B | Seed: 1002 | Sr:  99.8% | V_lat:   3.7% | V_ovr:   3.7% | Time:  6.4s
+2026-10-31 02:43:11,927 [INFO] [ 33/360] (  9.2%) Scenario: nominal          | Config: CFG-B | Seed: 1004 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.9% | Time:  6.5s
+2026-10-31 02:43:12,697 [INFO] [ 34/360] (  9.4%) Scenario: nominal          | Config: CFG-B | Seed: 1006 | Sr:  99.8% | V_lat:   3.9% | V_ovr:   3.9% | Time:  6.1s
+2026-10-31 02:43:12,829 [INFO] [ 35/360] (  9.7%) Scenario: nominal          | Config: CFG-B | Seed: 1005 | Sr:  99.9% | V_lat:   3.7% | V_ovr:   3.7% | Time:  6.2s
+2026-10-31 02:43:13,535 [INFO] [ 36/360] ( 10.0%) Scenario: nominal          | Config: CFG-B | Seed: 1007 | Sr:  99.8% | V_lat:   3.7% | V_ovr:   3.7% | Time:  6.5s
+2026-10-31 02:43:15,996 [INFO] [ 37/360] ( 10.3%) Scenario: nominal          | Config: CFG-B | Seed: 1009 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.8% | Time:  6.2s
+2026-10-31 02:43:16,120 [INFO] [ 38/360] ( 10.6%) Scenario: nominal          | Config: CFG-B | Seed: 1008 | Sr:  99.8% | V_lat:   3.7% | V_ovr:   3.8% | Time:  6.1s
+2026-10-31 02:43:17,660 [INFO] [ 39/360] ( 10.8%) Scenario: nominal          | Config: CFG-B | Seed: 1010 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.9% | Time:  5.4s
+2026-10-31 02:43:19,273 [INFO] [ 40/360] ( 11.1%) Scenario: nominal          | Config: CFG-B | Seed: 1011 | Sr:  99.8% | V_lat:   3.9% | V_ovr:   3.9% | Time:  6.1s
+2026-10-31 02:43:19,502 [INFO] [ 41/360] ( 11.4%) Scenario: nominal          | Config: CFG-B | Seed: 1012 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.9% | Time:  6.2s
+2026-10-31 02:43:19,976 [INFO] [ 42/360] ( 11.7%) Scenario: nominal          | Config: CFG-B | Seed: 1013 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.9% | Time:  5.8s
+2026-10-31 02:43:22,769 [INFO] [ 43/360] ( 11.9%) Scenario: nominal          | Config: CFG-B | Seed: 1014 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.8% | Time:  6.1s
+2026-10-31 02:43:22,838 [INFO] [ 44/360] ( 12.2%) Scenario: nominal          | Config: CFG-B | Seed: 1015 | Sr:  99.8% | V_lat:   3.7% | V_ovr:   3.7% | Time:  6.2s
+2026-10-31 02:43:23,568 [INFO] [ 45/360] ( 12.5%) Scenario: nominal          | Config: CFG-B | Seed: 1001 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.9% | Time:  6.1s
+2026-10-31 02:43:23,962 [INFO] [ 46/360] ( 12.8%) Scenario: nominal          | Config: CFG-B | Seed: 1016 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.8% | Time:  6.1s
+2026-10-31 02:43:26,562 [INFO] [ 47/360] ( 13.1%) Scenario: nominal          | Config: CFG-B | Seed: 1017 | Sr:  99.8% | V_lat:   3.6% | V_ovr:   3.7% | Time:  6.7s
+2026-10-31 02:43:26,669 [INFO] [ 48/360] ( 13.3%) Scenario: nominal          | Config: CFG-B | Seed: 1019 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.8% | Time:  6.0s
+2026-10-31 02:43:26,815 [INFO] [ 49/360] ( 13.6%) Scenario: nominal          | Config: CFG-B | Seed: 1018 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.8% | Time:  6.8s
+2026-10-31 02:43:29,609 [INFO] [ 50/360] ( 13.9%) Scenario: nominal          | Config: CFG-B | Seed: 1020 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.8% | Time:  6.1s
+2026-10-31 02:43:30,162 [INFO] [ 51/360] ( 14.2%) Scenario: nominal          | Config: CFG-B | Seed: 1021 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.8% | Time:  6.7s
+2026-10-31 02:43:30,348 [INFO] [ 52/360] ( 14.4%) Scenario: nominal          | Config: CFG-B | Seed: 1023 | Sr:  99.8% | V_lat:   3.8% | V_ovr:   3.8% | Time:  5.9s
+2026-10-31 02:43:30,538 [INFO] [ 53/360] ( 14.7%) Scenario: nominal          | Config: CFG-B | Seed: 1022 | Sr:  99.8% | V_lat:   3.9% | V_ovr:   4.0% | Time:  6.8s
+2026-10-31 02:43:33,230 [INFO] [ 54/360] ( 15.0%) Scenario: nominal          | Config: CFG-B | Seed: 1024 | Sr:  99.8% | V_lat:   3.6% | V_ovr:   3.7% | Time:  6.4s
+2026-10-31 02:43:33,912 [INFO] [ 55/360] ( 15.3%) Scenario: nominal          | Config: CFG-B | Seed: 1026 | Sr:  99.8% | V_lat:   3.9% | V_ovr:   3.9% | Time:  6.8s
+2026-10-31 02:43:34,082 [INFO] [ 56/360] ( 15.6%) Scenario: nominal          | Config: CFG-B | Seed: 1025 | Sr:  99.8% | V_lat:   4.0% | V_ovr:   4.0% | Time:  6.7s
+2026-10-31 02:43:36,810 [INFO] [ 57/360] ( 15.8%) Scenario: nominal          | Config: CFG-B | Seed: 1027 | Sr:  99.8% | V_lat:   3.6% | V_ovr:   3.6% | Time:  6.7s
+2026-10-31 02:43:37,564 [INFO] [ 58/360] ( 16.1%) Scenario: nominal          | Config: CFG-B | Seed: 1028 | Sr:  99.8% | V_lat:   3.9% | V_ovr:   3.9% | Time:  6.9s
+2026-10-31 02:43:37,721 [INFO] [ 59/360] ( 16.4%) Scenario: nominal          | Config: CFG-B | Seed: 1030 | Sr:  99.8% | V_lat:   4.0% | V_ovr:   4.0% | Time:  7.0s
+2026-10-31 02:43:37,839 [INFO] [ 60/360] ( 16.7%) Scenario: nominal          | Config: CFG-B | Seed: 1029 | Sr:  99.8% | V_lat:   4.0% | V_ovr:   4.0% | Time:  7.1s
+2026-10-31 02:43:47,905 [INFO] [ 61/360] ( 16.9%) Scenario: nominal          | Config: CFG-C | Seed: 1003 | Sr:  99.9% | V_lat:   2.9% | V_ovr:   2.9% | Time: 10.9s
+2026-10-31 02:43:48,108 [INFO] [ 62/360] ( 17.2%) Scenario: nominal          | Config: CFG-C | Seed: 1002 | Sr:  99.9% | V_lat:   2.4% | V_ovr:   2.5% | Time: 11.4s
+2026-10-31 02:43:51,405 [INFO] [ 63/360] ( 17.5%) Scenario: nominal          | Config: CFG-C | Seed: 1004 | Sr:  99.9% | V_lat:   2.7% | V_ovr:   2.7% | Time: 11.2s
+2026-10-31 02:43:52,153 [INFO] [ 64/360] ( 17.8%) Scenario: nominal          | Config: CFG-C | Seed: 1005 | Sr:  99.9% | V_lat:   2.9% | V_ovr:   2.9% | Time: 11.0s
+2026-10-31 02:43:52,508 [INFO] [ 65/360] ( 18.1%) Scenario: nominal          | Config: CFG-C | Seed: 1006 | Sr:  99.9% | V_lat:   2.7% | V_ovr:   2.7% | Time: 11.5s
+2026-10-31 02:43:52,645 [INFO] [ 66/360] ( 18.3%) Scenario: nominal          | Config: CFG-C | Seed: 1007 | Sr:  99.9% | V_lat:   2.9% | V_ovr:   2.9% | Time: 11.4s
+2026-10-31 02:44:03,443 [INFO] [ 67/360] ( 18.6%) Scenario: nominal          | Config: CFG-C | Seed: 1009 | Sr:  99.9% | V_lat:   2.9% | V_ovr:   2.9% | Time: 12.4s
+2026-10-31 02:44:04,432 [INFO] [ 68/360] ( 18.9%) Scenario: nominal          | Config: CFG-C | Seed: 1008 | Sr:  99.8% | V_lat:   2.8% | V_ovr:   2.9% | Time: 13.7s
+2026-10-31 02:44:05,671 [INFO] [ 69/360] ( 19.2%) Scenario: nominal          | Config: CFG-C | Seed: 1010 | Sr:  99.8% | V_lat:   2.7% | V_ovr:   2.8% | Time: 11.7s
+2026-10-31 02:44:06,679 [INFO] [ 70/360] ( 19.4%) Scenario: nominal          | Config: CFG-C | Seed: 1011 | Sr:  99.9% | V_lat:   2.4% | V_ovr:   2.5% | Time: 12.1s
+2026-10-31 02:44:07,695 [INFO] [ 71/360] ( 19.7%) Scenario: nominal          | Config: CFG-C | Seed: 1012 | Sr:  99.8% | V_lat:   2.7% | V_ovr:   2.7% | Time: 12.7s
+2026-10-31 02:44:07,785 [INFO] [ 72/360] ( 20.0%) Scenario: nominal          | Config: CFG-C | Seed: 1013 | Sr:  99.8% | V_lat:   2.7% | V_ovr:   2.7% | Time: 12.7s
+2026-10-31 02:44:09,083 [INFO] [ 73/360] ( 20.3%) Scenario: nominal          | Config: CFG-C | Seed: 1001 | Sr:  99.9% | V_lat:   2.7% | V_ovr:   2.7% | Time: 11.3s
+2026-10-31 02:44:17,910 [INFO] [ 74/360] ( 20.6%) Scenario: nominal          | Config: CFG-C | Seed: 1014 | Sr:  99.9% | V_lat:   2.8% | V_ovr:   2.8% | Time: 11.4s
+2026-10-31 02:44:20,425 [INFO] [ 75/360] ( 20.8%) Scenario: nominal          | Config: CFG-C | Seed: 1015 | Sr:  99.9% | V_lat:   2.8% | V_ovr:   2.9% | Time: 12.8s
+2026-10-31 02:44:20,797 [INFO] [ 76/360] ( 21.1%) Scenario: nominal          | Config: CFG-C | Seed: 1016 | Sr:  99.8% | V_lat:   3.0% | V_ovr:   3.0% | Time: 12.2s
+2026-10-31 02:44:22,664 [INFO] [ 77/360] ( 21.4%) Scenario: nominal          | Config: CFG-C | Seed: 1018 | Sr:  99.8% | V_lat:   2.7% | V_ovr:   2.8% | Time: 11.8s
+2026-10-31 02:44:22,881 [INFO] [ 78/360] ( 21.7%) Scenario: nominal          | Config: CFG-C | Seed: 1017 | Sr:  99.9% | V_lat:   2.6% | V_ovr:   2.7% | Time: 13.0s
+2026-10-31 02:44:24,262 [INFO] [ 79/360] ( 21.9%) Scenario: nominal          | Config: CFG-C | Seed: 1019 | Sr:  99.8% | V_lat:   2.9% | V_ovr:   2.9% | Time: 12.9s
+2026-10-31 02:44:24,976 [INFO] [ 80/360] ( 22.2%) Scenario: nominal          | Config: CFG-C | Seed: 1020 | Sr:  99.9% | V_lat:   2.5% | V_ovr:   2.6% | Time: 13.3s
+2026-10-31 02:44:33,483 [INFO] [ 81/360] ( 22.5%) Scenario: nominal          | Config: CFG-C | Seed: 1021 | Sr:  99.9% | V_lat:   2.7% | V_ovr:   2.7% | Time: 13.1s
+2026-10-31 02:44:35,641 [INFO] [ 82/360] ( 22.8%) Scenario: nominal          | Config: CFG-C | Seed: 1022 | Sr:  99.8% | V_lat:   2.9% | V_ovr:   2.9% | Time: 12.9s
+2026-10-31 02:44:36,454 [INFO] [ 83/360] ( 23.1%) Scenario: nominal          | Config: CFG-C | Seed: 1023 | Sr:  99.8% | V_lat:   2.9% | V_ovr:   2.9% | Time: 13.1s
+2026-10-31 02:44:37,751 [INFO] [ 84/360] ( 23.3%) Scenario: nominal          | Config: CFG-C | Seed: 1025 | Sr:  99.8% | V_lat:   2.7% | V_ovr:   2.8% | Time: 12.3s
+2026-10-31 02:44:37,930 [INFO] [ 85/360] ( 23.6%) Scenario: nominal          | Config: CFG-C | Seed: 1024 | Sr:  99.9% | V_lat:   2.8% | V_ovr:   2.8% | Time: 12.9s
+2026-10-31 02:44:38,632 [INFO] [ 86/360] ( 23.9%) Scenario: nominal          | Config: CFG-C | Seed: 1026 | Sr:  99.8% | V_lat:   2.8% | V_ovr:   2.8% | Time: 12.1s
+2026-10-31 02:44:39,575 [INFO] [ 87/360] ( 24.2%) Scenario: nominal          | Config: CFG-C | Seed: 1027 | Sr:  99.8% | V_lat:   2.6% | V_ovr:   2.6% | Time: 12.2s
+2026-10-31 02:44:45,248 [INFO] [ 88/360] ( 24.4%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1002 | Sr:  65.9% | V_lat:  32.2% | V_ovr:  43.7% | Time:  6.9s
+2026-10-31 02:44:46,287 [INFO] [ 89/360] ( 24.7%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1003 | Sr:  66.0% | V_lat:  32.6% | V_ovr:  43.8% | Time:  7.2s
+2026-10-31 02:44:47,234 [INFO] [ 90/360] ( 25.0%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1004 | Sr:  65.8% | V_lat:  33.0% | V_ovr:  44.1% | Time:  7.4s
+2026-10-31 02:44:47,680 [INFO] [ 91/360] ( 25.3%) Scenario: nominal          | Config: CFG-C | Seed: 1028 | Sr:  99.9% | V_lat:   2.9% | V_ovr:   2.9% | Time: 11.8s
+2026-10-31 02:44:48,932 [INFO] [ 92/360] ( 25.6%) Scenario: nominal          | Config: CFG-C | Seed: 1029 | Sr:  99.9% | V_lat:   2.5% | V_ovr:   2.5% | Time: 10.8s
+2026-10-31 02:44:51,044 [INFO] [ 93/360] ( 25.8%) Scenario: nominal          | Config: CFG-C | Seed: 1030 | Sr:  99.9% | V_lat:   2.9% | V_ovr:   2.9% | Time: 12.3s
+2026-10-31 02:44:52,234 [INFO] [ 94/360] ( 26.1%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1005 | Sr:  65.6% | V_lat:  32.5% | V_ovr:  43.9% | Time:  6.8s
+2026-10-31 02:44:52,993 [INFO] [ 95/360] ( 26.4%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1006 | Sr:  65.8% | V_lat:  32.4% | V_ovr:  43.8% | Time:  6.4s
+2026-10-31 02:44:53,845 [INFO] [ 96/360] ( 26.7%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1007 | Sr:  66.0% | V_lat:  32.4% | V_ovr:  43.6% | Time:  6.3s
+2026-10-31 02:44:54,557 [INFO] [ 97/360] ( 26.9%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1008 | Sr:  65.6% | V_lat:  32.7% | V_ovr:  44.2% | Time:  6.7s
+2026-10-31 02:44:55,835 [INFO] [ 98/360] ( 27.2%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1009 | Sr:  65.8% | V_lat:  32.9% | V_ovr:  44.0% | Time:  6.6s
+2026-10-31 02:44:58,300 [INFO] [ 99/360] ( 27.5%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1001 | Sr:  65.9% | V_lat:  33.1% | V_ovr:  44.2% | Time:  7.5s
+2026-10-31 02:44:58,385 [INFO] [100/360] ( 27.8%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1011 | Sr:  66.2% | V_lat:  32.8% | V_ovr:  43.9% | Time:  5.8s
+2026-10-31 02:44:58,552 [INFO] [101/360] ( 28.1%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1010 | Sr:  66.0% | V_lat:  31.9% | V_ovr:  43.5% | Time:  7.2s
+2026-10-31 02:44:59,212 [INFO] [102/360] ( 28.3%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1012 | Sr:  65.5% | V_lat:  33.0% | V_ovr:  44.3% | Time:  5.9s
+2026-10-31 02:45:00,181 [INFO] [103/360] ( 28.6%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1014 | Sr:  66.1% | V_lat:  33.0% | V_ovr:  44.0% | Time:  5.3s
+2026-10-31 02:45:00,360 [INFO] [104/360] ( 28.9%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1013 | Sr:  66.1% | V_lat:  32.8% | V_ovr:  44.0% | Time:  6.1s
+2026-10-31 02:45:01,795 [INFO] [105/360] ( 29.2%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1015 | Sr:  65.6% | V_lat:  33.1% | V_ovr:  44.2% | Time:  5.7s
+2026-10-31 02:45:04,328 [INFO] [106/360] ( 29.4%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1016 | Sr:  65.6% | V_lat:  33.0% | V_ovr:  44.3% | Time:  5.7s
+2026-10-31 02:45:04,560 [INFO] [107/360] ( 29.7%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1017 | Sr:  66.0% | V_lat:  32.9% | V_ovr:  43.8% | Time:  5.9s
+2026-10-31 02:45:05,282 [INFO] [108/360] ( 30.0%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1018 | Sr:  65.5% | V_lat:  32.6% | V_ovr:  44.1% | Time:  6.4s
+2026-10-31 02:45:05,334 [INFO] [109/360] ( 30.3%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1019 | Sr:  65.6% | V_lat:  32.7% | V_ovr:  44.1% | Time:  5.8s
+2026-10-31 02:45:05,966 [INFO] [110/360] ( 30.6%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1020 | Sr:  65.9% | V_lat:  32.0% | V_ovr:  43.6% | Time:  5.5s
+2026-10-31 02:45:06,615 [INFO] [111/360] ( 30.8%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1021 | Sr:  65.9% | V_lat:  32.9% | V_ovr:  44.1% | Time:  6.0s
+2026-10-31 02:45:07,320 [INFO] [112/360] ( 31.1%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1022 | Sr:  65.7% | V_lat:  32.8% | V_ovr:  44.1% | Time:  5.2s
+2026-10-31 02:45:10,441 [INFO] [113/360] ( 31.4%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1023 | Sr:  65.7% | V_lat:  33.3% | V_ovr:  44.3% | Time:  5.9s
+2026-10-31 02:45:10,961 [INFO] [114/360] ( 31.7%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1024 | Sr:  66.1% | V_lat:  33.6% | V_ovr:  44.4% | Time:  6.0s
+2026-10-31 02:45:11,378 [INFO] [115/360] ( 31.9%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1026 | Sr:  65.8% | V_lat:  33.4% | V_ovr:  44.4% | Time:  5.7s
+2026-10-31 02:45:11,746 [INFO] [116/360] ( 32.2%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1025 | Sr:  65.6% | V_lat:  32.8% | V_ovr:  44.2% | Time:  6.1s
+2026-10-31 02:45:12,869 [INFO] [117/360] ( 32.5%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1027 | Sr:  66.0% | V_lat:  33.1% | V_ovr:  44.1% | Time:  6.6s
+2026-10-31 02:45:13,214 [INFO] [118/360] ( 32.8%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1028 | Sr:  66.1% | V_lat:  33.1% | V_ovr:  43.9% | Time:  6.3s
+2026-10-31 02:45:13,695 [INFO] [119/360] ( 33.1%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1029 | Sr:  65.7% | V_lat:  32.9% | V_ovr:  44.4% | Time:  6.1s
+2026-10-31 02:45:17,451 [INFO] [120/360] ( 33.3%) Scenario: flash_crowd      | Config: CFG-A | Seed: 1030 | Sr:  65.8% | V_lat:  33.3% | V_ovr:  44.4% | Time:  6.7s
+2026-10-31 02:45:21,640 [INFO] [121/360] ( 33.6%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1002 | Sr:  99.3% | V_lat:   5.3% | V_ovr:   5.6% | Time:  7.5s
+2026-10-31 02:45:21,844 [INFO] [122/360] ( 33.9%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1003 | Sr:  99.1% | V_lat:   5.4% | V_ovr:   5.8% | Time:  7.0s
+2026-10-31 02:45:23,447 [INFO] [123/360] ( 34.2%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1004 | Sr:  99.1% | V_lat:   5.4% | V_ovr:   5.8% | Time:  7.8s
+2026-10-31 02:45:23,950 [INFO] [124/360] ( 34.4%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1005 | Sr:  99.5% | V_lat:   5.4% | V_ovr:   5.6% | Time:  7.8s
+2026-10-31 02:45:24,375 [INFO] [125/360] ( 34.7%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1006 | Sr:  99.1% | V_lat:   5.5% | V_ovr:   5.9% | Time:  8.2s
+2026-10-31 02:45:27,692 [INFO] [126/360] ( 35.0%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1007 | Sr:  99.2% | V_lat:   5.3% | V_ovr:   5.7% | Time:  7.9s
+2026-10-31 02:45:32,250 [INFO] [127/360] ( 35.3%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1008 | Sr:  99.1% | V_lat:   5.6% | V_ovr:   5.9% | Time:  8.0s
+2026-10-31 02:45:32,526 [INFO] [128/360] ( 35.6%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1009 | Sr:  99.4% | V_lat:   5.2% | V_ovr:   5.4% | Time:  8.1s
+2026-10-31 02:45:33,395 [INFO] [129/360] ( 35.8%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1010 | Sr:  99.2% | V_lat:   5.3% | V_ovr:   5.6% | Time:  7.3s
+2026-10-31 02:45:34,296 [INFO] [130/360] ( 36.1%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1011 | Sr:  99.1% | V_lat:   5.9% | V_ovr:   6.3% | Time:  7.7s
+2026-10-31 02:45:35,114 [INFO] [131/360] ( 36.4%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1012 | Sr:  99.3% | V_lat:   5.5% | V_ovr:   5.8% | Time:  8.1s
+2026-10-31 02:45:38,183 [INFO] [132/360] ( 36.7%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1013 | Sr:  99.1% | V_lat:   5.7% | V_ovr:   6.1% | Time:  8.0s
+2026-10-31 02:45:39,224 [INFO] [133/360] ( 36.9%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1001 | Sr:  99.2% | V_lat:   5.7% | V_ovr:   6.0% | Time:  6.8s
+2026-10-31 02:45:42,074 [INFO] [134/360] ( 37.2%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1014 | Sr:  99.2% | V_lat:   5.4% | V_ovr:   5.8% | Time:  7.5s
+2026-10-31 02:45:42,775 [INFO] [135/360] ( 37.5%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1015 | Sr:  99.4% | V_lat:   5.4% | V_ovr:   5.7% | Time:  7.8s
+2026-10-31 02:45:43,550 [INFO] [136/360] ( 37.8%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1016 | Sr:  99.4% | V_lat:   5.2% | V_ovr:   5.4% | Time:  7.9s
+2026-10-31 02:45:44,024 [INFO] [137/360] ( 38.1%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1017 | Sr:  99.3% | V_lat:   5.3% | V_ovr:   5.6% | Time:  7.3s
+2026-10-31 02:45:44,391 [INFO] [138/360] ( 38.3%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1018 | Sr:  99.2% | V_lat:   5.5% | V_ovr:   5.8% | Time:  6.8s
+2026-10-31 02:45:47,785 [INFO] [139/360] ( 38.6%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1019 | Sr:  99.1% | V_lat:   5.5% | V_ovr:   5.9% | Time:  7.3s
+2026-10-31 02:45:48,686 [INFO] [140/360] ( 38.9%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1020 | Sr:  99.2% | V_lat:   5.2% | V_ovr:   5.6% | Time:  7.3s
+2026-10-31 02:45:51,154 [INFO] [141/360] ( 39.2%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1021 | Sr:  99.4% | V_lat:   5.2% | V_ovr:   5.4% | Time:  6.6s
+2026-10-31 02:45:52,432 [INFO] [142/360] ( 39.4%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1022 | Sr:  99.2% | V_lat:   5.6% | V_ovr:   5.9% | Time:  7.5s
+2026-10-31 02:45:53,423 [INFO] [143/360] ( 39.7%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1023 | Sr:  99.5% | V_lat:   5.1% | V_ovr:   5.3% | Time:  7.5s
+2026-10-31 02:45:53,628 [INFO] [144/360] ( 40.0%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1024 | Sr:  99.4% | V_lat:   5.0% | V_ovr:   5.3% | Time:  7.3s
+2026-10-31 02:45:54,205 [INFO] [145/360] ( 40.3%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1025 | Sr:  99.3% | V_lat:   5.2% | V_ovr:   5.5% | Time:  7.4s
+2026-10-31 02:45:57,474 [INFO] [146/360] ( 40.6%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1026 | Sr:  99.3% | V_lat:   5.2% | V_ovr:   5.5% | Time:  7.4s
+2026-10-31 02:45:57,659 [INFO] [147/360] ( 40.8%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1027 | Sr:  99.4% | V_lat:   5.1% | V_ovr:   5.3% | Time:  6.7s
+2026-10-31 02:46:00,874 [INFO] [148/360] ( 41.1%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1028 | Sr:  99.5% | V_lat:   4.9% | V_ovr:   5.1% | Time:  7.2s
+2026-10-31 02:46:01,963 [INFO] [149/360] ( 41.4%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1030 | Sr:  99.0% | V_lat:   6.0% | V_ovr:   6.5% | Time:  6.5s
+2026-10-31 02:46:02,326 [INFO] [150/360] ( 41.7%) Scenario: flash_crowd      | Config: CFG-B | Seed: 1029 | Sr:  99.1% | V_lat:   5.4% | V_ovr:   5.8% | Time:  7.6s
+2026-10-31 02:46:13,784 [INFO] [151/360] ( 41.9%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1002 | Sr:  99.8% | V_lat:   2.9% | V_ovr:   3.0% | Time: 13.7s
+2026-10-31 02:46:18,561 [INFO] [152/360] ( 42.2%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1003 | Sr:  99.8% | V_lat:   2.9% | V_ovr:   3.0% | Time: 13.2s
+2026-10-31 02:46:19,512 [INFO] [153/360] ( 42.5%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1004 | Sr:  99.8% | V_lat:   2.9% | V_ovr:   2.9% | Time: 13.5s
+2026-10-31 02:46:24,810 [INFO] [154/360] ( 42.8%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1007 | Sr:  99.9% | V_lat:   2.9% | V_ovr:   3.0% | Time: 15.2s
+2026-10-31 02:46:25,747 [INFO] [155/360] ( 43.1%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1005 | Sr:  99.8% | V_lat:   3.0% | V_ovr:   3.1% | Time: 17.1s
+2026-10-31 02:46:25,925 [INFO] [156/360] ( 43.3%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1006 | Sr:  99.9% | V_lat:   2.8% | V_ovr:   2.9% | Time: 17.1s
+2026-10-31 02:46:37,165 [INFO] [157/360] ( 43.6%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1008 | Sr:  99.8% | V_lat:   2.8% | V_ovr:   2.9% | Time: 17.2s
+2026-10-31 02:46:43,541 [INFO] [158/360] ( 43.9%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1009 | Sr:  99.8% | V_lat:   3.0% | V_ovr:   3.1% | Time: 18.4s
+2026-10-31 02:46:43,635 [INFO] [159/360] ( 44.2%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1010 | Sr:  99.9% | V_lat:   2.8% | V_ovr:   2.9% | Time: 17.7s
+2026-10-31 02:46:44,285 [INFO] [160/360] ( 44.4%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1001 | Sr:  99.8% | V_lat:   2.7% | V_ovr:   2.8% | Time: 13.5s
+2026-10-31 02:46:48,512 [INFO] [161/360] ( 44.7%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1011 | Sr:  99.9% | V_lat:   3.2% | V_ovr:   3.2% | Time: 17.6s
+2026-10-31 02:46:48,573 [INFO] [162/360] ( 45.0%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1013 | Sr:  99.8% | V_lat:   3.2% | V_ovr:   3.3% | Time: 16.6s
+2026-10-31 02:46:48,693 [INFO] [163/360] ( 45.3%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1012 | Sr:  99.9% | V_lat:   3.1% | V_ovr:   3.2% | Time: 16.8s
+2026-10-31 02:47:02,841 [INFO] [164/360] ( 45.6%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1014 | Sr:  99.9% | V_lat:   3.1% | V_ovr:   3.1% | Time: 18.8s
+2026-10-31 02:47:11,720 [INFO] [165/360] ( 45.8%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1016 | Sr:  99.8% | V_lat:   2.8% | V_ovr:   2.8% | Time: 18.0s
+2026-10-31 02:47:13,601 [INFO] [166/360] ( 46.1%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1015 | Sr:  99.8% | V_lat:   3.2% | V_ovr:   3.3% | Time: 18.9s
+2026-10-31 02:47:14,849 [INFO] [167/360] ( 46.4%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1017 | Sr:  99.9% | V_lat:   2.9% | V_ovr:   2.9% | Time: 19.1s
+2026-10-31 02:47:20,277 [INFO] [168/360] ( 46.7%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1019 | Sr:  99.9% | V_lat:   3.1% | V_ovr:   3.1% | Time: 20.4s
+2026-10-31 02:47:20,588 [INFO] [169/360] ( 46.9%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1020 | Sr:  99.9% | V_lat:   2.8% | V_ovr:   2.9% | Time: 19.9s
+2026-10-31 02:47:21,338 [INFO] [170/360] ( 47.2%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1018 | Sr:  99.8% | V_lat:   2.9% | V_ovr:   3.0% | Time: 22.0s
+2026-10-31 02:47:38,153 [INFO] [171/360] ( 47.5%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1021 | Sr:  99.9% | V_lat:   2.6% | V_ovr:   2.6% | Time: 27.0s
+2026-10-31 02:47:41,009 [INFO] [172/360] ( 47.8%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1022 | Sr:  99.8% | V_lat:   2.8% | V_ovr:   2.8% | Time: 21.5s
+2026-10-31 02:47:43,263 [INFO] [173/360] ( 48.1%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1023 | Sr:  99.9% | V_lat:   2.7% | V_ovr:   2.8% | Time: 22.5s
+2026-10-31 02:47:46,660 [INFO] [174/360] ( 48.3%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1024 | Sr:  99.9% | V_lat:   2.8% | V_ovr:   2.8% | Time: 23.9s
+2026-10-31 02:47:50,760 [INFO] [175/360] ( 48.6%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1026 | Sr:  99.8% | V_lat:   2.8% | V_ovr:   2.8% | Time: 21.9s
+2026-10-31 02:47:51,184 [INFO] [176/360] ( 48.9%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1027 | Sr:  99.8% | V_lat:   2.8% | V_ovr:   2.8% | Time: 21.1s
+2026-10-31 02:47:52,227 [INFO] [177/360] ( 49.2%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1025 | Sr:  99.8% | V_lat:   2.8% | V_ovr:   2.9% | Time: 23.5s
+2026-10-31 02:48:00,608 [INFO] [178/360] ( 49.4%) Scenario: server_failure   | Config: CFG-A | Seed: 1002 | Sr:  86.2% | V_lat:  30.6% | V_ovr:  32.9% | Time:  8.8s
+2026-10-31 02:48:00,662 [INFO] [179/360] ( 49.7%) Scenario: server_failure   | Config: CFG-A | Seed: 1003 | Sr:  85.5% | V_lat:  30.1% | V_ovr:  32.9% | Time:  9.1s
+2026-10-31 02:48:01,299 [INFO] [180/360] ( 50.0%) Scenario: server_failure   | Config: CFG-A | Seed: 1004 | Sr:  85.5% | V_lat:  30.8% | V_ovr:  33.3% | Time:  8.6s
+2026-10-31 02:48:06,795 [INFO] [181/360] ( 50.3%) Scenario: server_failure   | Config: CFG-A | Seed: 1006 | Sr:  86.0% | V_lat:  31.2% | V_ovr:  33.5% | Time:  5.6s
+2026-10-31 02:48:07,076 [INFO] [182/360] ( 50.6%) Scenario: server_failure   | Config: CFG-A | Seed: 1005 | Sr:  85.5% | V_lat:  31.3% | V_ovr:  33.8% | Time:  6.0s
+2026-10-31 02:48:07,432 [INFO] [183/360] ( 50.8%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1028 | Sr:  99.9% | V_lat:   2.8% | V_ovr:   2.9% | Time: 22.8s
+2026-10-31 02:48:07,452 [INFO] [184/360] ( 51.1%) Scenario: server_failure   | Config: CFG-A | Seed: 1007 | Sr:  85.6% | V_lat:  29.9% | V_ovr:  32.6% | Time:  5.8s
+2026-10-31 02:48:08,630 [INFO] [185/360] ( 51.4%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1029 | Sr:  99.9% | V_lat:   2.7% | V_ovr:   2.7% | Time: 21.0s
+2026-10-31 02:48:09,552 [INFO] [186/360] ( 51.7%) Scenario: server_failure   | Config: CFG-A | Seed: 1001 | Sr:  85.8% | V_lat:  31.2% | V_ovr:  33.6% | Time:  9.0s
+2026-10-31 02:48:10,107 [INFO] [187/360] ( 51.9%) Scenario: flash_crowd      | Config: CFG-C | Seed: 1030 | Sr:  99.9% | V_lat:   2.8% | V_ovr:   2.9% | Time: 20.3s
+2026-10-31 02:48:12,603 [INFO] [188/360] ( 52.2%) Scenario: server_failure   | Config: CFG-A | Seed: 1008 | Sr:  85.2% | V_lat:  30.7% | V_ovr:  33.4% | Time:  5.5s
+2026-10-31 02:48:12,689 [INFO] [189/360] ( 52.5%) Scenario: server_failure   | Config: CFG-A | Seed: 1009 | Sr:  85.9% | V_lat:  31.3% | V_ovr:  33.5% | Time:  5.3s
+2026-10-31 02:48:13,243 [INFO] [190/360] ( 52.8%) Scenario: server_failure   | Config: CFG-A | Seed: 1011 | Sr:  85.6% | V_lat:  30.1% | V_ovr:  32.9% | Time:  5.5s
+2026-10-31 02:48:15,840 [INFO] [191/360] ( 53.1%) Scenario: server_failure   | Config: CFG-A | Seed: 1010 | Sr:  85.5% | V_lat:  30.3% | V_ovr:  32.9% | Time:  8.0s
+2026-10-31 02:48:15,883 [INFO] [192/360] ( 53.3%) Scenario: server_failure   | Config: CFG-A | Seed: 1013 | Sr:  86.0% | V_lat:  30.6% | V_ovr:  33.1% | Time:  6.0s
+2026-10-31 02:48:15,978 [INFO] [193/360] ( 53.6%) Scenario: server_failure   | Config: CFG-A | Seed: 1012 | Sr:  85.7% | V_lat:  32.1% | V_ovr:  34.5% | Time:  7.0s
+2026-10-31 02:48:17,797 [INFO] [194/360] ( 53.9%) Scenario: server_failure   | Config: CFG-A | Seed: 1014 | Sr:  85.9% | V_lat:  30.6% | V_ovr:  33.2% | Time:  6.7s
+2026-10-31 02:48:17,937 [INFO] [195/360] ( 54.2%) Scenario: server_failure   | Config: CFG-A | Seed: 1015 | Sr:  85.4% | V_lat:  30.9% | V_ovr:  33.5% | Time:  5.1s
+2026-10-31 02:48:18,203 [INFO] [196/360] ( 54.4%) Scenario: server_failure   | Config: CFG-A | Seed: 1016 | Sr:  85.7% | V_lat:  31.4% | V_ovr:  33.7% | Time:  5.2s
+2026-10-31 02:48:18,352 [INFO] [197/360] ( 54.7%) Scenario: server_failure   | Config: CFG-A | Seed: 1017 | Sr:  86.2% | V_lat:  30.1% | V_ovr:  32.6% | Time:  4.8s
+2026-10-31 02:48:21,327 [INFO] [198/360] ( 55.0%) Scenario: server_failure   | Config: CFG-A | Seed: 1019 | Sr:  85.5% | V_lat:  30.9% | V_ovr:  33.5% | Time:  5.1s
+2026-10-31 02:48:21,913 [INFO] [199/360] ( 55.3%) Scenario: server_failure   | Config: CFG-A | Seed: 1018 | Sr:  85.0% | V_lat:  30.9% | V_ovr:  33.6% | Time:  5.8s
+2026-10-31 02:48:22,055 [INFO] [200/360] ( 55.6%) Scenario: server_failure   | Config: CFG-A | Seed: 1020 | Sr:  85.7% | V_lat:  30.5% | V_ovr:  33.2% | Time:  5.7s
+2026-10-31 02:48:23,135 [INFO] [201/360] ( 55.8%) Scenario: server_failure   | Config: CFG-A | Seed: 1022 | Sr:  85.6% | V_lat:  30.6% | V_ovr:  33.1% | Time:  4.9s
+2026-10-31 02:48:23,857 [INFO] [202/360] ( 56.1%) Scenario: server_failure   | Config: CFG-A | Seed: 1021 | Sr:  85.9% | V_lat:  30.8% | V_ovr:  33.3% | Time:  5.7s
+2026-10-31 02:48:23,938 [INFO] [203/360] ( 56.4%) Scenario: server_failure   | Config: CFG-A | Seed: 1024 | Sr:  86.0% | V_lat:  31.6% | V_ovr:  34.0% | Time:  4.8s
+2026-10-31 02:48:24,130 [INFO] [204/360] ( 56.7%) Scenario: server_failure   | Config: CFG-A | Seed: 1023 | Sr:  85.2% | V_lat:  30.9% | V_ovr:  33.4% | Time:  5.6s
+2026-10-31 02:48:26,754 [INFO] [205/360] ( 56.9%) Scenario: server_failure   | Config: CFG-A | Seed: 1025 | Sr:  85.3% | V_lat:  31.1% | V_ovr:  33.6% | Time:  5.1s
+2026-10-31 02:48:27,841 [INFO] [206/360] ( 57.2%) Scenario: server_failure   | Config: CFG-A | Seed: 1027 | Sr:  85.4% | V_lat:  31.1% | V_ovr:  33.6% | Time:  5.5s
+2026-10-31 02:48:28,470 [INFO] [207/360] ( 57.5%) Scenario: server_failure   | Config: CFG-A | Seed: 1026 | Sr:  85.6% | V_lat:  30.5% | V_ovr:  33.2% | Time:  6.2s
+2026-10-31 02:48:28,848 [INFO] [208/360] ( 57.8%) Scenario: server_failure   | Config: CFG-A | Seed: 1028 | Sr:  85.7% | V_lat:  30.8% | V_ovr:  33.4% | Time:  5.4s
+2026-10-31 02:48:29,282 [INFO] [209/360] ( 58.1%) Scenario: server_failure   | Config: CFG-A | Seed: 1030 | Sr:  85.3% | V_lat:  31.0% | V_ovr:  33.5% | Time:  5.1s
+2026-10-31 02:48:29,437 [INFO] [210/360] ( 58.3%) Scenario: server_failure   | Config: CFG-A | Seed: 1029 | Sr:  85.2% | V_lat:  31.5% | V_ovr:  34.0% | Time:  5.4s
+2026-10-31 02:48:34,947 [INFO] [211/360] ( 58.6%) Scenario: server_failure   | Config: CFG-B | Seed: 1002 | Sr:  99.7% | V_lat:   4.7% | V_ovr:   4.7% | Time:  5.6s
+2026-10-31 02:48:35,932 [INFO] [212/360] ( 58.9%) Scenario: server_failure   | Config: CFG-B | Seed: 1003 | Sr:  99.7% | V_lat:   4.9% | V_ovr:   5.0% | Time:  5.5s
+2026-10-31 02:48:36,490 [INFO] [213/360] ( 59.2%) Scenario: server_failure   | Config: CFG-B | Seed: 1005 | Sr:  99.8% | V_lat:   4.7% | V_ovr:   4.8% | Time:  5.5s
+2026-10-31 02:48:36,520 [INFO] [214/360] ( 59.4%) Scenario: server_failure   | Config: CFG-B | Seed: 1004 | Sr:  99.6% | V_lat:   4.9% | V_ovr:   5.0% | Time:  5.8s
+2026-10-31 02:48:36,761 [INFO] [215/360] ( 59.7%) Scenario: server_failure   | Config: CFG-B | Seed: 1006 | Sr:  99.6% | V_lat:   4.9% | V_ovr:   5.0% | Time:  5.3s
+2026-10-31 02:48:37,252 [INFO] [216/360] ( 60.0%) Scenario: server_failure   | Config: CFG-B | Seed: 1007 | Sr:  99.6% | V_lat:   4.8% | V_ovr:   4.9% | Time:  5.8s
+2026-10-31 02:48:43,120 [INFO] [217/360] ( 60.3%) Scenario: server_failure   | Config: CFG-B | Seed: 1008 | Sr:  99.6% | V_lat:   4.9% | V_ovr:   5.0% | Time:  5.8s
+2026-10-31 02:48:44,411 [INFO] [218/360] ( 60.6%) Scenario: server_failure   | Config: CFG-B | Seed: 1009 | Sr:  99.8% | V_lat:   4.7% | V_ovr:   4.7% | Time:  5.9s
+2026-10-31 02:48:44,553 [INFO] [219/360] ( 60.8%) Scenario: server_failure   | Config: CFG-B | Seed: 1012 | Sr:  99.6% | V_lat:   4.9% | V_ovr:   5.0% | Time:  5.5s
+2026-10-31 02:48:44,646 [INFO] [220/360] ( 61.1%) Scenario: server_failure   | Config: CFG-B | Seed: 1010 | Sr:  99.6% | V_lat:   4.7% | V_ovr:   4.8% | Time:  5.7s
+2026-10-31 02:48:44,893 [INFO] [221/360] ( 61.4%) Scenario: server_failure   | Config: CFG-B | Seed: 1011 | Sr:  99.6% | V_lat:   4.9% | V_ovr:   5.0% | Time:  6.2s
+2026-10-31 02:48:45,178 [INFO] [222/360] ( 61.7%) Scenario: server_failure   | Config: CFG-B | Seed: 1013 | Sr:  99.5% | V_lat:   4.9% | V_ovr:   5.1% | Time:  5.7s
+2026-10-31 02:48:46,251 [INFO] [223/360] ( 61.9%) Scenario: server_failure   | Config: CFG-B | Seed: 1001 | Sr:  99.7% | V_lat:   4.9% | V_ovr:   5.0% | Time:  6.2s
+2026-10-31 02:48:51,475 [INFO] [224/360] ( 62.2%) Scenario: server_failure   | Config: CFG-B | Seed: 1014 | Sr:  99.7% | V_lat:   4.9% | V_ovr:   4.9% | Time:  5.9s
+2026-10-31 02:48:52,685 [INFO] [225/360] ( 62.5%) Scenario: server_failure   | Config: CFG-B | Seed: 1017 | Sr:  99.7% | V_lat:   4.7% | V_ovr:   4.8% | Time:  5.6s
+2026-10-31 02:48:52,832 [INFO] [226/360] ( 62.8%) Scenario: server_failure   | Config: CFG-B | Seed: 1019 | Sr:  99.6% | V_lat:   4.9% | V_ovr:   5.0% | Time:  5.0s
+2026-10-31 02:48:53,065 [INFO] [227/360] ( 63.1%) Scenario: server_failure   | Config: CFG-B | Seed: 1018 | Sr:  99.7% | V_lat:   4.8% | V_ovr:   4.8% | Time:  6.0s
+2026-10-31 02:48:53,086 [INFO] [228/360] ( 63.3%) Scenario: server_failure   | Config: CFG-B | Seed: 1016 | Sr:  99.7% | V_lat:   4.7% | V_ovr:   4.8% | Time:  6.0s
+2026-10-31 02:48:53,093 [INFO] [229/360] ( 63.6%) Scenario: server_failure   | Config: CFG-B | Seed: 1015 | Sr:  99.7% | V_lat:   4.8% | V_ovr:   4.9% | Time:  5.9s
+2026-10-31 02:48:55,100 [INFO] [230/360] ( 63.9%) Scenario: server_failure   | Config: CFG-B | Seed: 1020 | Sr:  99.6% | V_lat:   4.9% | V_ovr:   5.0% | Time:  6.3s
+2026-10-31 02:48:59,615 [INFO] [231/360] ( 64.2%) Scenario: server_failure   | Config: CFG-B | Seed: 1021 | Sr:  99.7% | V_lat:   4.6% | V_ovr:   4.6% | Time:  5.7s
+2026-10-31 02:49:00,938 [INFO] [232/360] ( 64.4%) Scenario: server_failure   | Config: CFG-B | Seed: 1022 | Sr:  99.5% | V_lat:   4.8% | V_ovr:   4.9% | Time:  5.7s
+2026-10-31 02:49:01,425 [INFO] [233/360] ( 64.7%) Scenario: server_failure   | Config: CFG-B | Seed: 1023 | Sr:  99.8% | V_lat:   4.4% | V_ovr:   4.5% | Time:  6.2s
+2026-10-31 02:49:01,624 [INFO] [234/360] ( 65.0%) Scenario: server_failure   | Config: CFG-B | Seed: 1024 | Sr:  99.7% | V_lat:   4.8% | V_ovr:   4.9% | Time:  5.9s
+2026-10-31 02:49:01,748 [INFO] [235/360] ( 65.3%) Scenario: server_failure   | Config: CFG-B | Seed: 1025 | Sr:  99.7% | V_lat:   5.0% | V_ovr:   5.1% | Time:  6.2s
+2026-10-31 02:49:01,890 [INFO] [236/360] ( 65.6%) Scenario: server_failure   | Config: CFG-B | Seed: 1026 | Sr:  99.7% | V_lat:   4.9% | V_ovr:   5.0% | Time:  6.4s
+2026-10-31 02:49:03,289 [INFO] [237/360] ( 65.8%) Scenario: server_failure   | Config: CFG-B | Seed: 1027 | Sr:  99.7% | V_lat:   4.5% | V_ovr:   4.6% | Time:  5.5s
+2026-10-31 02:49:07,707 [INFO] [238/360] ( 66.1%) Scenario: server_failure   | Config: CFG-B | Seed: 1028 | Sr:  99.7% | V_lat:   4.9% | V_ovr:   5.0% | Time:  5.6s
+2026-10-31 02:49:08,738 [INFO] [239/360] ( 66.4%) Scenario: server_failure   | Config: CFG-B | Seed: 1029 | Sr:  99.5% | V_lat:   5.2% | V_ovr:   5.3% | Time:  5.3s
+2026-10-31 02:49:09,887 [INFO] [240/360] ( 66.7%) Scenario: server_failure   | Config: CFG-B | Seed: 1030 | Sr:  99.6% | V_lat:   5.1% | V_ovr:   5.2% | Time:  5.8s
+2026-10-31 02:49:16,173 [INFO] [241/360] ( 66.9%) Scenario: server_failure   | Config: CFG-C | Seed: 1002 | Sr:  98.0% | V_lat:   5.5% | V_ovr:   6.4% | Time:  9.5s
+2026-10-31 02:49:17,570 [INFO] [242/360] ( 67.2%) Scenario: server_failure   | Config: CFG-C | Seed: 1003 | Sr:  98.0% | V_lat:   5.6% | V_ovr:   6.5% | Time: 10.4s
+2026-10-31 02:49:19,082 [INFO] [243/360] ( 67.5%) Scenario: server_failure   | Config: CFG-C | Seed: 1004 | Sr:  98.2% | V_lat:   4.9% | V_ovr:   5.8% | Time:  9.8s
+2026-10-31 02:49:24,997 [INFO] [244/360] ( 67.8%) Scenario: server_failure   | Config: CFG-C | Seed: 1005 | Sr:  98.0% | V_lat:   5.5% | V_ovr:   6.4% | Time: 11.2s
+2026-10-31 02:49:26,372 [INFO] [245/360] ( 68.1%) Scenario: server_failure   | Config: CFG-C | Seed: 1006 | Sr:  97.9% | V_lat:   5.6% | V_ovr:   6.5% | Time: 12.6s
+2026-10-31 02:49:26,902 [INFO] [246/360] ( 68.3%) Scenario: server_failure   | Config: CFG-C | Seed: 1007 | Sr:  98.2% | V_lat:   5.3% | V_ovr:   6.2% | Time: 12.3s
+2026-10-31 02:49:33,836 [INFO] [247/360] ( 68.6%) Scenario: server_failure   | Config: CFG-C | Seed: 1008 | Sr:  98.0% | V_lat:   5.6% | V_ovr:   6.5% | Time: 13.0s
+2026-10-31 02:49:34,150 [INFO] [248/360] ( 68.9%) Scenario: server_failure   | Config: CFG-C | Seed: 1009 | Sr:  98.2% | V_lat:   5.7% | V_ovr:   6.5% | Time: 11.9s
+2026-10-31 02:49:35,198 [INFO] [249/360] ( 69.2%) Scenario: server_failure   | Config: CFG-C | Seed: 1010 | Sr:  98.0% | V_lat:   5.4% | V_ovr:   6.3% | Time: 11.6s
+2026-10-31 02:49:37,952 [INFO] [250/360] ( 69.4%) Scenario: server_failure   | Config: CFG-C | Seed: 1001 | Sr:  98.1% | V_lat:   5.5% | V_ovr:   6.4% | Time: 10.0s
+2026-10-31 02:49:40,913 [INFO] [251/360] ( 69.7%) Scenario: server_failure   | Config: CFG-C | Seed: 1011 | Sr:  98.2% | V_lat:   5.7% | V_ovr:   6.5% | Time: 11.3s
+2026-10-31 02:49:41,866 [INFO] [252/360] ( 70.0%) Scenario: server_failure   | Config: CFG-C | Seed: 1012 | Sr:  98.0% | V_lat:   5.5% | V_ovr:   6.4% | Time: 10.7s
+2026-10-31 02:49:42,725 [INFO] [253/360] ( 70.3%) Scenario: server_failure   | Config: CFG-C | Seed: 1013 | Sr:  98.0% | V_lat:   5.5% | V_ovr:   6.4% | Time: 11.1s
+2026-10-31 02:49:50,227 [INFO] [254/360] ( 70.6%) Scenario: server_failure   | Config: CFG-C | Seed: 1014 | Sr:  98.2% | V_lat:   5.7% | V_ovr:   6.5% | Time: 11.8s
+2026-10-31 02:49:50,757 [INFO] [255/360] ( 70.8%) Scenario: server_failure   | Config: CFG-C | Seed: 1015 | Sr:  98.2% | V_lat:   5.8% | V_ovr:   6.6% | Time: 12.1s
+2026-10-31 02:49:50,781 [INFO] [256/360] ( 71.1%) Scenario: server_failure   | Config: CFG-C | Seed: 1016 | Sr:  98.0% | V_lat:   5.5% | V_ovr:   6.4% | Time: 10.7s
+2026-10-31 02:49:53,001 [INFO] [257/360] ( 71.4%) Scenario: server_failure   | Config: CFG-C | Seed: 1017 | Sr:  98.1% | V_lat:   5.6% | V_ovr:   6.5% | Time: 10.5s
+2026-10-31 02:49:56,670 [INFO] [258/360] ( 71.7%) Scenario: server_failure   | Config: CFG-C | Seed: 1018 | Sr:  98.1% | V_lat:   5.2% | V_ovr:   6.1% | Time: 11.1s
+2026-10-31 02:49:57,514 [INFO] [259/360] ( 71.9%) Scenario: server_failure   | Config: CFG-C | Seed: 1019 | Sr:  98.1% | V_lat:   5.3% | V_ovr:   6.1% | Time: 10.8s
+2026-10-31 02:49:59,145 [INFO] [260/360] ( 72.2%) Scenario: server_failure   | Config: CFG-C | Seed: 1020 | Sr:  97.7% | V_lat:   5.2% | V_ovr:   6.3% | Time: 11.9s
+2026-10-31 02:50:05,632 [INFO] [261/360] ( 72.5%) Scenario: server_failure   | Config: CFG-C | Seed: 1021 | Sr:  98.1% | V_lat:   5.2% | V_ovr:   6.1% | Time: 10.8s
+2026-10-31 02:50:06,287 [INFO] [262/360] ( 72.8%) Scenario: server_failure   | Config: CFG-C | Seed: 1022 | Sr:  98.0% | V_lat:   5.6% | V_ovr:   6.5% | Time: 11.1s
+2026-10-31 02:50:07,137 [INFO] [263/360] ( 73.1%) Scenario: server_failure   | Config: CFG-C | Seed: 1023 | Sr:  98.2% | V_lat:   5.2% | V_ovr:   6.0% | Time: 11.6s
+2026-10-31 02:50:08,027 [INFO] [264/360] ( 73.3%) Scenario: server_failure   | Config: CFG-C | Seed: 1024 | Sr:  98.0% | V_lat:   5.3% | V_ovr:   6.2% | Time: 10.7s
+2026-10-31 02:50:12,150 [INFO] [265/360] ( 73.6%) Scenario: server_failure   | Config: CFG-C | Seed: 1026 | Sr:  98.1% | V_lat:   5.6% | V_ovr:   6.5% | Time: 10.2s
+2026-10-31 02:50:12,465 [INFO] [266/360] ( 73.9%) Scenario: server_failure   | Config: CFG-C | Seed: 1025 | Sr:  98.2% | V_lat:   5.7% | V_ovr:   6.5% | Time: 11.6s
+2026-10-31 02:50:16,045 [INFO] [267/360] ( 74.2%) Scenario: server_failure   | Config: CFG-C | Seed: 1027 | Sr:  98.1% | V_lat:   5.3% | V_ovr:   6.2% | Time: 11.6s
+2026-10-31 02:50:20,284 [INFO] [268/360] ( 74.4%) Scenario: compound_stress  | Config: CFG-A | Seed: 1002 | Sr:  61.7% | V_lat:  27.8% | V_ovr:  47.4% | Time:  7.8s
+2026-10-31 02:50:21,794 [INFO] [269/360] ( 74.7%) Scenario: compound_stress  | Config: CFG-A | Seed: 1003 | Sr:  61.6% | V_lat:  28.0% | V_ovr:  47.4% | Time:  8.8s
+2026-10-31 02:50:25,666 [INFO] [270/360] ( 75.0%) Scenario: compound_stress  | Config: CFG-A | Seed: 1004 | Sr:  61.3% | V_lat:  28.4% | V_ovr:  47.7% | Time:  9.3s
+2026-10-31 02:50:26,693 [INFO] [271/360] ( 75.3%) Scenario: server_failure   | Config: CFG-C | Seed: 1028 | Sr:  98.2% | V_lat:   5.3% | V_ovr:   6.2% | Time: 12.6s
+2026-10-31 02:50:27,500 [INFO] [272/360] ( 75.6%) Scenario: server_failure   | Config: CFG-C | Seed: 1029 | Sr:  98.1% | V_lat:   5.2% | V_ovr:   6.2% | Time: 12.7s
+2026-10-31 02:50:29,105 [INFO] [273/360] ( 75.8%) Scenario: server_failure   | Config: CFG-C | Seed: 1030 | Sr:  98.2% | V_lat:   5.5% | V_ovr:   6.3% | Time: 13.5s
+2026-10-31 02:50:30,030 [INFO] [274/360] ( 76.1%) Scenario: compound_stress  | Config: CFG-A | Seed: 1005 | Sr:  61.4% | V_lat:  28.0% | V_ovr:  47.6% | Time:  9.2s
+2026-10-31 02:50:31,145 [INFO] [275/360] ( 76.4%) Scenario: compound_stress  | Config: CFG-A | Seed: 1006 | Sr:  61.6% | V_lat:  28.1% | V_ovr:  47.5% | Time:  8.9s
+2026-10-31 02:50:35,977 [INFO] [276/360] ( 76.7%) Scenario: compound_stress  | Config: CFG-A | Seed: 1007 | Sr:  61.8% | V_lat:  27.9% | V_ovr:  47.4% | Time:  9.6s
+2026-10-31 02:50:36,414 [INFO] [277/360] ( 76.9%) Scenario: compound_stress  | Config: CFG-A | Seed: 1008 | Sr:  61.4% | V_lat:  28.3% | V_ovr:  47.9% | Time:  9.4s
+2026-10-31 02:50:36,658 [INFO] [278/360] ( 77.2%) Scenario: compound_stress  | Config: CFG-A | Seed: 1001 | Sr:  61.6% | V_lat:  28.6% | V_ovr:  47.8% | Time:  7.4s
+2026-10-31 02:50:38,304 [INFO] [279/360] ( 77.5%) Scenario: compound_stress  | Config: CFG-A | Seed: 1011 | Sr:  61.8% | V_lat:  28.4% | V_ovr:  47.6% | Time:  7.9s
+2026-10-31 02:50:39,877 [INFO] [280/360] ( 77.8%) Scenario: compound_stress  | Config: CFG-A | Seed: 1012 | Sr:  61.5% | V_lat:  28.8% | V_ovr:  48.0% | Time:  8.4s
+2026-10-31 02:50:40,176 [INFO] [281/360] ( 78.1%) Scenario: compound_stress  | Config: CFG-A | Seed: 1009 | Sr:  61.4% | V_lat:  28.5% | V_ovr:  47.7% | Time: 12.3s
+2026-10-31 02:50:40,315 [INFO] [282/360] ( 78.3%) Scenario: compound_stress  | Config: CFG-A | Seed: 1010 | Sr:  61.8% | V_lat:  27.5% | V_ovr:  47.1% | Time: 10.9s
+2026-10-31 02:50:42,983 [INFO] [283/360] ( 78.6%) Scenario: compound_stress  | Config: CFG-A | Seed: 1013 | Sr:  61.7% | V_lat:  28.2% | V_ovr:  47.5% | Time:  6.7s
+2026-10-31 02:50:43,470 [INFO] [284/360] ( 78.9%) Scenario: compound_stress  | Config: CFG-A | Seed: 1014 | Sr:  61.7% | V_lat:  28.5% | V_ovr:  47.6% | Time:  6.7s
+2026-10-31 02:50:44,578 [INFO] [285/360] ( 79.2%) Scenario: compound_stress  | Config: CFG-A | Seed: 1015 | Sr:  61.4% | V_lat:  28.8% | V_ovr:  47.9% | Time:  7.6s
+2026-10-31 02:50:45,506 [INFO] [286/360] ( 79.4%) Scenario: compound_stress  | Config: CFG-A | Seed: 1016 | Sr:  61.5% | V_lat:  28.7% | V_ovr:  47.9% | Time:  6.9s
+2026-10-31 02:50:46,181 [INFO] [287/360] ( 79.7%) Scenario: compound_stress  | Config: CFG-A | Seed: 1017 | Sr:  61.8% | V_lat:  28.6% | V_ovr:  47.6% | Time:  6.0s
+2026-10-31 02:50:47,067 [INFO] [288/360] ( 80.0%) Scenario: compound_stress  | Config: CFG-A | Seed: 1018 | Sr:  61.3% | V_lat:  28.2% | V_ovr:  47.8% | Time:  6.5s
+2026-10-31 02:50:47,109 [INFO] [289/360] ( 80.3%) Scenario: compound_stress  | Config: CFG-A | Seed: 1019 | Sr:  61.4% | V_lat:  28.2% | V_ovr:  47.7% | Time:  6.5s
+2026-10-31 02:50:49,158 [INFO] [290/360] ( 80.6%) Scenario: compound_stress  | Config: CFG-A | Seed: 1020 | Sr:  61.7% | V_lat:  27.5% | V_ovr:  47.2% | Time:  5.9s
+2026-10-31 02:50:50,131 [INFO] [291/360] ( 80.8%) Scenario: compound_stress  | Config: CFG-A | Seed: 1021 | Sr:  61.7% | V_lat:  28.6% | V_ovr:  47.7% | Time:  6.3s
+2026-10-31 02:50:50,953 [INFO] [292/360] ( 81.1%) Scenario: compound_stress  | Config: CFG-A | Seed: 1022 | Sr:  61.4% | V_lat:  28.3% | V_ovr:  47.7% | Time:  6.2s
+2026-10-31 02:50:51,129 [INFO] [293/360] ( 81.4%) Scenario: compound_stress  | Config: CFG-A | Seed: 1023 | Sr:  61.3% | V_lat:  28.7% | V_ovr:  47.9% | Time:  5.3s
+2026-10-31 02:50:52,674 [INFO] [294/360] ( 81.7%) Scenario: compound_stress  | Config: CFG-A | Seed: 1024 | Sr:  61.8% | V_lat:  29.2% | V_ovr:  48.1% | Time:  6.2s
+2026-10-31 02:50:53,684 [INFO] [295/360] ( 81.9%) Scenario: compound_stress  | Config: CFG-A | Seed: 1026 | Sr:  61.6% | V_lat:  29.0% | V_ovr:  48.0% | Time:  6.1s
+2026-10-31 02:50:53,889 [INFO] [296/360] ( 82.2%) Scenario: compound_stress  | Config: CFG-A | Seed: 1025 | Sr:  61.5% | V_lat:  28.5% | V_ovr:  47.8% | Time:  6.5s
+2026-10-31 02:50:56,507 [INFO] [297/360] ( 82.5%) Scenario: compound_stress  | Config: CFG-A | Seed: 1027 | Sr:  61.8% | V_lat:  28.9% | V_ovr:  47.8% | Time:  6.9s
+2026-10-31 02:50:57,764 [INFO] [298/360] ( 82.8%) Scenario: compound_stress  | Config: CFG-A | Seed: 1028 | Sr:  61.9% | V_lat:  28.7% | V_ovr:  47.6% | Time:  7.3s
+2026-10-31 02:50:58,435 [INFO] [299/360] ( 83.1%) Scenario: compound_stress  | Config: CFG-A | Seed: 1029 | Sr:  61.4% | V_lat:  28.4% | V_ovr:  48.0% | Time:  7.1s
+2026-10-31 02:50:58,456 [INFO] [300/360] ( 83.3%) Scenario: compound_stress  | Config: CFG-A | Seed: 1030 | Sr:  61.6% | V_lat:  29.0% | V_ovr:  48.0% | Time:  7.0s
+2026-10-31 02:51:04,508 [INFO] [301/360] ( 83.6%) Scenario: compound_stress  | Config: CFG-B | Seed: 1002 | Sr:  86.0% | V_lat:  29.1% | V_ovr:  33.0% | Time:  8.3s
+2026-10-31 02:51:04,511 [INFO] [302/360] ( 83.9%) Scenario: compound_stress  | Config: CFG-B | Seed: 1003 | Sr:  85.8% | V_lat:  29.3% | V_ovr:  33.5% | Time:  7.8s
+2026-10-31 02:51:06,631 [INFO] [303/360] ( 84.2%) Scenario: compound_stress  | Config: CFG-B | Seed: 1004 | Sr:  84.8% | V_lat:  28.6% | V_ovr:  33.3% | Time:  7.8s
+2026-10-31 02:51:08,551 [INFO] [304/360] ( 84.4%) Scenario: compound_stress  | Config: CFG-B | Seed: 1006 | Sr:  85.2% | V_lat:  29.0% | V_ovr:  33.3% | Time:  7.5s
+2026-10-31 02:51:08,914 [INFO] [305/360] ( 84.7%) Scenario: compound_stress  | Config: CFG-B | Seed: 1005 | Sr:  86.6% | V_lat:  30.2% | V_ovr:  33.7% | Time:  8.5s
+2026-10-31 02:51:09,125 [INFO] [306/360] ( 85.0%) Scenario: compound_stress  | Config: CFG-B | Seed: 1007 | Sr:  86.1% | V_lat:  29.0% | V_ovr:  33.1% | Time:  8.1s
+2026-10-31 02:51:14,440 [INFO] [307/360] ( 85.3%) Scenario: compound_stress  | Config: CFG-B | Seed: 1008 | Sr:  85.4% | V_lat:  29.3% | V_ovr:  33.6% | Time:  7.5s
+2026-10-31 02:51:14,470 [INFO] [308/360] ( 85.6%) Scenario: compound_stress  | Config: CFG-B | Seed: 1009 | Sr:  86.3% | V_lat:  29.7% | V_ovr:  33.6% | Time:  7.4s
+2026-10-31 02:51:16,651 [INFO] [309/360] ( 85.8%) Scenario: compound_stress  | Config: CFG-B | Seed: 1010 | Sr:  86.4% | V_lat:  29.1% | V_ovr:  32.9% | Time:  7.5s
+2026-10-31 02:51:19,146 [INFO] [310/360] ( 86.1%) Scenario: compound_stress  | Config: CFG-B | Seed: 1011 | Sr:  84.8% | V_lat:  28.8% | V_ovr:  33.3% | Time:  8.3s
+2026-10-31 02:51:19,439 [INFO] [311/360] ( 86.4%) Scenario: compound_stress  | Config: CFG-B | Seed: 1013 | Sr:  86.0% | V_lat:  29.6% | V_ovr:  33.6% | Time:  7.8s
+2026-10-31 02:51:20,128 [INFO] [312/360] ( 86.7%) Scenario: compound_stress  | Config: CFG-B | Seed: 1012 | Sr:  85.1% | V_lat:  29.2% | V_ovr:  33.6% | Time:  8.4s
+2026-10-31 02:51:22,816 [INFO] [313/360] ( 86.9%) Scenario: compound_stress  | Config: CFG-B | Seed: 1001 | Sr:  85.1% | V_lat:  28.9% | V_ovr:  33.4% | Time:  8.5s
+2026-10-31 02:51:24,708 [INFO] [314/360] ( 87.2%) Scenario: compound_stress  | Config: CFG-B | Seed: 1014 | Sr:  85.8% | V_lat:  28.8% | V_ovr:  33.2% | Time:  7.9s
+2026-10-31 02:51:25,058 [INFO] [315/360] ( 87.5%) Scenario: compound_stress  | Config: CFG-B | Seed: 1015 | Sr:  86.1% | V_lat:  29.0% | V_ovr:  32.9% | Time:  8.2s
+2026-10-31 02:51:26,096 [INFO] [316/360] ( 87.8%) Scenario: compound_stress  | Config: CFG-B | Seed: 1016 | Sr:  86.6% | V_lat:  30.1% | V_ovr:  33.6% | Time:  7.1s
+2026-10-31 02:51:29,372 [INFO] [317/360] ( 88.1%) Scenario: compound_stress  | Config: CFG-B | Seed: 1018 | Sr:  86.0% | V_lat:  29.6% | V_ovr:  33.5% | Time:  7.5s
+2026-10-31 02:51:29,662 [INFO] [318/360] ( 88.3%) Scenario: compound_stress  | Config: CFG-B | Seed: 1017 | Sr:  86.4% | V_lat:  29.5% | V_ovr:  33.4% | Time:  8.2s
+2026-10-31 02:51:29,996 [INFO] [319/360] ( 88.6%) Scenario: compound_stress  | Config: CFG-B | Seed: 1019 | Sr:  85.7% | V_lat:  29.6% | V_ovr:  33.8% | Time:  7.6s
+2026-10-31 02:51:33,230 [INFO] [320/360] ( 88.9%) Scenario: compound_stress  | Config: CFG-B | Seed: 1020 | Sr:  86.1% | V_lat:  29.6% | V_ovr:  33.5% | Time:  7.9s
+2026-10-31 02:51:33,963 [INFO] [321/360] ( 89.2%) Scenario: compound_stress  | Config: CFG-B | Seed: 1021 | Sr:  86.7% | V_lat:  29.3% | V_ovr:  33.0% | Time:  6.6s
+2026-10-31 02:51:34,255 [INFO] [322/360] ( 89.4%) Scenario: compound_stress  | Config: CFG-B | Seed: 1022 | Sr:  84.9% | V_lat:  29.3% | V_ovr:  33.6% | Time:  6.8s
+2026-10-31 02:51:35,740 [INFO] [323/360] ( 89.7%) Scenario: compound_stress  | Config: CFG-B | Seed: 1023 | Sr:  87.3% | V_lat:  30.5% | V_ovr:  33.6% | Time:  7.2s
+2026-10-31 02:51:38,829 [INFO] [324/360] ( 90.0%) Scenario: compound_stress  | Config: CFG-B | Seed: 1024 | Sr:  86.8% | V_lat:  29.4% | V_ovr:  33.1% | Time:  7.2s
+2026-10-31 02:51:39,839 [INFO] [325/360] ( 90.3%) Scenario: compound_stress  | Config: CFG-B | Seed: 1025 | Sr:  86.0% | V_lat:  29.3% | V_ovr:  33.4% | Time:  7.8s
+2026-10-31 02:51:40,198 [INFO] [326/360] ( 90.6%) Scenario: compound_stress  | Config: CFG-B | Seed: 1026 | Sr:  86.8% | V_lat:  29.5% | V_ovr:  33.2% | Time:  7.8s
+2026-10-31 02:51:42,078 [INFO] [327/360] ( 90.8%) Scenario: compound_stress  | Config: CFG-B | Seed: 1027 | Sr:  86.7% | V_lat:  30.0% | V_ovr:  33.5% | Time:  6.7s
+2026-10-31 02:51:43,818 [INFO] [328/360] ( 91.1%) Scenario: compound_stress  | Config: CFG-B | Seed: 1028 | Sr:  86.4% | V_lat:  29.2% | V_ovr:  33.1% | Time:  7.3s
+2026-10-31 02:51:43,943 [INFO] [329/360] ( 91.4%) Scenario: compound_stress  | Config: CFG-B | Seed: 1029 | Sr:  84.6% | V_lat:  28.8% | V_ovr:  33.5% | Time:  7.1s
+2026-10-31 02:51:45,079 [INFO] [330/360] ( 91.7%) Scenario: compound_stress  | Config: CFG-B | Seed: 1030 | Sr:  84.5% | V_lat:  28.4% | V_ovr:  33.4% | Time:  6.6s
+2026-10-31 02:52:01,272 [INFO] [331/360] ( 91.9%) Scenario: compound_stress  | Config: CFG-C | Seed: 1002 | Sr:  86.8% | V_lat:  32.2% | V_ovr:  35.1% | Time: 14.1s
+2026-10-31 02:52:01,344 [INFO] [332/360] ( 92.2%) Scenario: compound_stress  | Config: CFG-C | Seed: 1003 | Sr:  87.2% | V_lat:  33.0% | V_ovr:  35.6% | Time: 13.8s
+2026-10-31 02:52:03,026 [INFO] [333/360] ( 92.5%) Scenario: compound_stress  | Config: CFG-C | Seed: 1004 | Sr:  86.5% | V_lat:  32.6% | V_ovr:  35.4% | Time: 13.1s
+2026-10-31 02:52:05,736 [INFO] [334/360] ( 92.8%) Scenario: compound_stress  | Config: CFG-C | Seed: 1005 | Sr:  86.3% | V_lat:  32.8% | V_ovr:  35.6% | Time: 13.7s
+2026-10-31 02:52:05,998 [INFO] [335/360] ( 93.1%) Scenario: compound_stress  | Config: CFG-C | Seed: 1006 | Sr:  86.6% | V_lat:  32.1% | V_ovr:  34.9% | Time: 13.2s
+2026-10-31 02:52:09,465 [INFO] [336/360] ( 93.3%) Scenario: compound_stress  | Config: CFG-C | Seed: 1007 | Sr:  87.3% | V_lat:  32.1% | V_ovr:  34.7% | Time: 14.3s
+2026-10-31 02:52:34,826 [INFO] [337/360] ( 93.6%) Scenario: compound_stress  | Config: CFG-C | Seed: 1009 | Sr:  87.2% | V_lat:  33.9% | V_ovr:  36.3% | Time: 24.8s
+2026-10-31 02:52:36,769 [INFO] [338/360] ( 93.9%) Scenario: compound_stress  | Config: CFG-C | Seed: 1008 | Sr:  86.7% | V_lat:  32.9% | V_ovr:  35.7% | Time: 23.4s
+2026-10-31 02:52:37,802 [INFO] [339/360] ( 94.2%) Scenario: compound_stress  | Config: CFG-C | Seed: 1010 | Sr:  87.0% | V_lat:  32.0% | V_ovr:  34.8% | Time: 23.1s
+2026-10-31 02:52:40,289 [INFO] [340/360] ( 94.4%) Scenario: compound_stress  | Config: CFG-C | Seed: 1001 | Sr:  86.8% | V_lat:  32.7% | V_ovr:  35.3% | Time: 12.6s
+2026-10-31 02:52:41,987 [INFO] [341/360] ( 94.7%) Scenario: compound_stress  | Config: CFG-C | Seed: 1012 | Sr:  86.2% | V_lat:  32.4% | V_ovr:  35.4% | Time: 24.2s
+2026-10-31 02:52:43,512 [INFO] [342/360] ( 95.0%) Scenario: compound_stress  | Config: CFG-C | Seed: 1011 | Sr:  86.4% | V_lat:  32.1% | V_ovr:  35.1% | Time: 29.2s
+2026-10-31 02:52:45,988 [INFO] [343/360] ( 95.3%) Scenario: compound_stress  | Config: CFG-C | Seed: 1013 | Sr:  87.1% | V_lat:  32.7% | V_ovr:  35.3% | Time: 24.8s
+2026-10-31 02:53:10,732 [INFO] [344/360] ( 95.6%) Scenario: compound_stress  | Config: CFG-C | Seed: 1015 | Sr:  87.0% | V_lat:  32.8% | V_ovr:  35.4% | Time: 23.8s
+2026-10-31 02:53:12,470 [INFO] [345/360] ( 95.8%) Scenario: compound_stress  | Config: CFG-C | Seed: 1016 | Sr:  87.2% | V_lat:  33.1% | V_ovr:  35.7% | Time: 25.6s
+2026-10-31 02:53:13,292 [INFO] [346/360] ( 96.1%) Scenario: compound_stress  | Config: CFG-C | Seed: 1014 | Sr:  86.9% | V_lat:  32.5% | V_ovr:  35.3% | Time: 26.9s
+2026-10-31 02:53:14,323 [INFO] [347/360] ( 96.4%) Scenario: compound_stress  | Config: CFG-C | Seed: 1017 | Sr:  87.0% | V_lat:  32.8% | V_ovr:  35.4% | Time: 24.4s
+2026-10-31 02:53:16,605 [INFO] [348/360] ( 96.7%) Scenario: compound_stress  | Config: CFG-C | Seed: 1018 | Sr:  86.4% | V_lat:  32.6% | V_ovr:  35.4% | Time: 26.4s
+2026-10-31 02:53:19,451 [INFO] [349/360] ( 96.9%) Scenario: compound_stress  | Config: CFG-C | Seed: 1019 | Sr:  87.0% | V_lat:  33.2% | V_ovr:  35.9% | Time: 27.6s
+2026-10-31 02:53:20,277 [INFO] [350/360] ( 97.2%) Scenario: compound_stress  | Config: CFG-C | Seed: 1020 | Sr:  86.6% | V_lat:  32.5% | V_ovr:  35.4% | Time: 24.7s
+2026-10-31 02:53:43,469 [INFO] [351/360] ( 97.5%) Scenario: compound_stress  | Config: CFG-C | Seed: 1022 | Sr:  86.4% | V_lat:  32.8% | V_ovr:  35.6% | Time: 22.0s
+2026-10-31 02:53:43,520 [INFO] [352/360] ( 97.8%) Scenario: compound_stress  | Config: CFG-C | Seed: 1021 | Sr:  87.4% | V_lat:  32.4% | V_ovr:  35.0% | Time: 23.5s
+2026-10-31 02:53:43,606 [INFO] [353/360] ( 98.1%) Scenario: compound_stress  | Config: CFG-C | Seed: 1023 | Sr:  86.9% | V_lat:  32.7% | V_ovr:  35.4% | Time: 22.4s
+2026-10-31 02:53:43,912 [INFO] [354/360] ( 98.3%) Scenario: compound_stress  | Config: CFG-C | Seed: 1024 | Sr:  87.2% | V_lat:  32.4% | V_ovr:  34.9% | Time: 21.1s
+2026-10-31 02:53:47,979 [INFO] [355/360] ( 98.6%) Scenario: compound_stress  | Config: CFG-C | Seed: 1026 | Sr:  87.4% | V_lat:  32.5% | V_ovr:  35.1% | Time: 22.3s
+2026-10-31 02:53:48,483 [INFO] [356/360] ( 98.9%) Scenario: compound_stress  | Config: CFG-C | Seed: 1025 | Sr:  87.0% | V_lat:  32.5% | V_ovr:  35.3% | Time: 25.4s
+2026-10-31 02:53:49,204 [INFO] [357/360] ( 99.2%) Scenario: compound_stress  | Config: CFG-C | Seed: 1027 | Sr:  86.5% | V_lat:  32.2% | V_ovr:  35.0% | Time: 22.4s
+2026-10-31 02:54:00,210 [INFO] [358/360] ( 99.4%) Scenario: compound_stress  | Config: CFG-C | Seed: 1029 | Sr:  86.8% | V_lat:  32.8% | V_ovr:  35.5% | Time: 12.7s
+2026-10-31 02:54:00,594 [INFO] [359/360] ( 99.7%) Scenario: compound_stress  | Config: CFG-C | Seed: 1028 | Sr:  87.5% | V_lat:  32.5% | V_ovr:  35.0% | Time: 13.1s
+2026-10-31 02:54:01,087 [INFO] [360/360] (100.0%) Scenario: compound_stress  | Config: CFG-C | Seed: 1030 | Sr:  86.0% | V_lat:  32.4% | V_ovr:  35.4% | Time: 13.3s
+2026-10-31 02:54:01,256 [INFO] -------------------------------------------------------------------------
+2026-10-31 02:54:01,256 [INFO] All 360/360 runs completed in 677.3s (~11.3 minutes).
+2026-10-31 02:54:01,309 [INFO] Saved master results to: /home/andesindica/Downloads/CloudRescue-Research/results/experiment_360/master_results.csv
+2026-10-31 02:54:01,417 [INFO] Saved aggregated metrics to: /home/andesindica/Downloads/CloudRescue-Research/results/experiment_360/aggregated_metrics.csv
+2026-10-31 02:54:01,417 [INFO] =========================================================================
+2026-10-31 02:54:01,417 [INFO] Verification PASSED: Exactly 360/360 runs executed with 0 failures.
+2026-10-31 02:54:01,417 [INFO] =========================================================================
