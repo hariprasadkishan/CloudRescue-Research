@@ -1,29 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { fetchPublication } from '../api';
+import React, { useState } from 'react';
 import ColophonFooter from '../components/ColophonFooter';
 import {
-  Download,
-  FileText,
   Printer,
   ChevronLeft,
   ChevronRight,
   ShieldCheck,
-  Check,
-  Maximize2,
-  ExternalLink,
 } from 'lucide-react';
 
-export default function Screen7Publication({ setActiveScreen }) {
-  const [pubData, setPubData] = useState(null);
+export default function Screen7Publication() {
   const [activeSheet, setActiveSheet] = useState(1);
   const [zoomLevel, setZoomLevel] = useState(100);
-  const [copiedManifest, setCopiedManifest] = useState(false);
-
-  useEffect(() => {
-    fetchPublication()
-      .then(setPubData)
-      .catch((err) => console.error('Failed to load publication data:', err));
-  }, []);
 
   const totalSheets = 7;
 
@@ -39,11 +25,6 @@ export default function Screen7Publication({ setActiveScreen }) {
 
   const handlePrint = () => {
     window.print();
-  };
-
-  const handleDownloadDataset = () => {
-    // Trigger download of master_results.csv from server
-    window.open('/api/summary', '_blank');
   };
 
   return (

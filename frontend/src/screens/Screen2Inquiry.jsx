@@ -9,17 +9,14 @@ export default function Screen2Inquiry({
   setActiveScreen,
 }) {
   const [scenarios, setScenarios] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchScenarios()
       .then((data) => {
         setScenarios(data);
-        setLoading(false);
       })
       .catch((err) => {
         console.error('Failed to load scenarios:', err);
-        setLoading(false);
       });
   }, []);
 

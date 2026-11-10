@@ -9,17 +9,14 @@ export default function Screen4Benchmark({
   setActiveScreen,
 }) {
   const [benchmarkData, setBenchmarkData] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchBenchmarks()
       .then((data) => {
         setBenchmarkData(data.benchmarks);
-        setLoading(false);
       })
       .catch((err) => {
         console.error('Failed to load benchmarks:', err);
-        setLoading(false);
       });
   }, []);
 
@@ -47,11 +44,9 @@ export default function Screen4Benchmark({
   const cfgB_p95 = getMetric(sc, 'CFG-B', 'p95_latency_ms');
   const cfgC_p95 = getMetric(sc, 'CFG-C', 'p95_latency_ms');
 
-  const cfgA_tAdapt = getMetric(sc, 'CFG-A', 't_adapt_s');
   const cfgB_tAdapt = getMetric(sc, 'CFG-B', 't_adapt_s');
   const cfgC_tAdapt = getMetric(sc, 'CFG-C', 't_adapt_s');
 
-  const cfgA_tRestore = getMetric(sc, 'CFG-A', 't_restore_s');
   const cfgB_tRestore = getMetric(sc, 'CFG-B', 't_restore_s');
   const cfgC_tRestore = getMetric(sc, 'CFG-C', 't_restore_s');
 

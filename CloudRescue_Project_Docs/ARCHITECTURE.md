@@ -206,70 +206,83 @@
 
 ---
 
-## 4. Proposed codebase layout
+## 4. Implemented codebase layout
 
 ```text
 CloudRescue-Research/
-├── CloudRescue_Project_Docs/
-│   ├── AGENTS.md
-│   ├── ARCHITECTURE.md
-│   ├── DECISIONS.md
-│   ├── DESIGN.md
-│   ├── EXPERIMENT_PLAN.md
-│   ├── PRD.md
-│   ├── README.md
-│   └── RESEARCH_NOTES.md
+├── CloudRescue_Project_Docs/      # Formal research requirements, PRD, architecture, and ADRs
+│   ├── AGENTS.md                  # Rules of engagement and safety constraints
+│   ├── ARCHITECTURE.md            # Simulator architecture & mathematical derivations
+│   ├── DECISIONS.md               # ADRs logging decisions DEC-001 through DEC-010
+│   ├── DESIGN.md                  # Visual design system & screen specifications
+│   ├── EXPERIMENT_PLAN.md         # Pre-registered experimental methodology
+│   ├── PRD.md                     # Product requirements & 10 standardized metrics
+│   ├── README.md                  # Documentation index & status map
+│   └── RESEARCH_NOTES.md          # Literature survey mapping (Welsh & Benkhelifa; Klein et al.)
+├── frontend/                      # React 19 + Vite 8 + Tailwind CSS 4 research dashboard
+│   ├── src/
+│   │   ├── components/            # Navigation and Colophon footer
+│   │   ├── screens/               # 7 editorial monograph screens (Screens 1–7)
+│   │   └── api.js                 # Frontend REST API client
+│   ├── package.json
+│   └── vite.config.js             # Dev server & backend proxy configuration
+├── paper/                         # Formal academic research manuscript & audits
+│   ├── CloudRescue_Research_Paper_Draft.md  # Complete 10-section paper draft
+│   ├── SECTION_8_AUDIT_REPORT.md  # Certified 770-cell data audit
+│   ├── FINAL_ACADEMIC_REVIEW.md   # 10-criterion academic audit
+│   └── REFERENCES_TO_VERIFY.md    # 17/17 verified IEEE citations
 ├── research/
-│   └── assigned-paper.pdf
-├── simulator/
-│   └── cloudrescue/
+│   └── assigned-paper.pdf         # Foundational survey paper (Welsh & Benkhelifa 2020)
+├── results/                       # Certified experimental outputs
+│   └── experiment_360/            # Primary evaluation (360 runs, 30 matched seeds)
+│       ├── master_results.csv     # Master results table (360 rows × 28 metrics)
+│       ├── aggregated_metrics.csv # Summary metrics by scenario and configuration
+│       ├── statistical_comparisons.csv # Paired hypothesis test battery
+│       ├── plots/                 # 6 publication-ready figures (300 DPI)
+│       ├── sensitivity/           # 144-run BALB weight grid sweeps
+│       └── runs/                  # Per-run traces, configs, and controller timeseries
+├── scripts/                       # CLI experiment orchestrators and analysis tools
+│   ├── run_experiment_matrix.py   # 360-run master execution orchestrator
+│   ├── analyze_results.py         # Paired statistical hypothesis tests
+│   ├── run_sensitivity.py         # 144-run BALB weight grid sweeps
+│   ├── generate_plots.py          # 300 DPI publication figure generator
+│   ├── run_baseline.py            # CFG-A preliminary validation runner
+│   ├── run_brownout.py            # CFG-B preliminary validation runner
+│   ├── run_balb.py                # CFG-C preliminary validation runner
+│   ├── compare_ablation.py        # 3-way validation run comparison table
+│   └── reconcile_recovery_metrics.py # DEC-010 nominal reference reconciliation
+├── server/                        # FastAPI REST API backend
+│   └── main.py                    # Read-only service exposing verified experiment data
+├── simulator/cloudrescue/         # Discrete-event simulation package (SimPy)
+│   ├── __init__.py
+│   ├── config.py                  # Pydantic configuration schemas and validation
+│   ├── balancing/                 # Ingress load balancing policies
+│   │   ├── __init__.py
+│   │   ├── brownout_aware.py      # BALB composite scoring with anti-overload penalties
+│   │   └── shortest_queue.py      # Standard Join-Shortest-Queue (JSQ) baseline
+│   ├── control/                   # Autonomic feedback controllers
+│   │   ├── __init__.py
+│   │   └── brownout_controller.py # Discrete velocity-form PI controller with anti-windup
+│   ├── engine/                    # Simulation execution engine
+│   │   ├── __init__.py
+│   │   └── simulation.py          # SimPy coordinator and failure injection lifecycle
+│   ├── models/                    # Simulation domain entities
+│   │   ├── __init__.py
+│   │   ├── request.py             # Request data tuple and lifecycle states
+│   │   └── worker.py              # Dual-stage compute worker with bounded FIFO queue
+│   ├── monitoring/                # Telemetry and post-simulation analysis
+│   │   ├── __init__.py
+│   │   ├── event_logger.py        # Structured event streams and CSV serialization
+│   │   └── recovery_analyzer.py   # DEC-010 nominal-referenced recovery analyzer
+│   └── workload/                  # Workload generation
 │       ├── __init__.py
-│       ├── config/
-│       │   ├── __init__.py
-│       │   ├── schema.py           # Pydantic/dataclass parameter models
-│       │   └── validator.py        # Configuration bounds validation
-│       ├── workload/
-│       │   ├── __init__.py
-│       │   ├── request.py          # Pre-sampled Request data tuple
-│       │   └── generator.py        # Multi-stream arrival & service generator
-│       ├── cloud_model/
-│       │   ├── __init__.py
-│       │   ├── queue.py            # Bounded FIFO queue model with timeout drop
-│       │   └── server.py           # Dual-stage CPU service model with instant check
-│       ├── failures/
-│       │   ├── __init__.py
-│       │   └── injector.py         # Crash and recovery schedule
-│       ├── resilience/
-│       │   ├── __init__.py
-│       │   ├── controller.py       # Velocity PI controller with intrinsic anti-windup
-│       │   └── load_balancer.py    # JSQ (CFG-A/B) and BALB (CFG-C)
-│       ├── events/
-│       │   ├── __init__.py
-│       │   └── recorder.py         # Structured event stream logger
-│       ├── metrics/
-│       │   ├── __init__.py
-│       │   └── calculator.py       # Standardized metric formulas (10 metrics)
-│       ├── storage/
-│       │   ├── __init__.py
-│       │   └── persistence.py      # Artifact directory management
-│       └── runner/
-│           ├── __init__.py
-│           ├── orchestrator.py     # 3-way ablation experiment coordinator
-│           └── statistical.py      # Paired t-test, Wilcoxon, effect sizes
-├── tests/
-│   ├── test_config.py
-│   ├── test_controller.py          # PI velocity math, bounds, anti-windup tests
-│   ├── test_load_balancer.py       # JSQ, BALB anti-overload, and fallback tests
-│   ├── test_server_queue.py        # FIFO and timeout drop tests
-│   ├── test_stream_isolation.py    # Multi-stream PRNG independence tests
-│   ├── test_metrics.py             # Metric formula verification tests
-│   └── test_reproducibility.py     # Paired seed equality tests
-├── experiments/
-│   └── configs/                    # Standardized experiment YAML/JSON configs
-├── results/                        # Preserved run directories
-├── frontend/                       # React UI (to be developed per DESIGN.md)
-└── scripts/
-    └── run_experiments.py          # CLI entry point for batch runs
+│       └── generator.py           # 5-stream PRNG-isolated arrival and service generator
+├── tests/                         # 56 automated unit and regression tests
+├── FINAL_FREEZE_SIGNOFF.md        # Formal research freeze certificate
+├── FINAL_REPRODUCIBILITY_AUDIT.md # Comprehensive independent reproducibility audit report
+├── pytest.ini                     # Pytest configuration
+├── requirements.txt               # Pinned Python dependencies
+└── README.md                      # Root project overview and reproduction guide
 ```
 
 ---

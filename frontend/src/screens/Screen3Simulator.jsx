@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { fetchTimeseries, fetchBenchmarks } from '../api';
 import ColophonFooter from '../components/ColophonFooter';
-import { Play, Pause, RotateCcw, Cpu, ShieldCheck, Activity, Info } from 'lucide-react';
+import { Play, Pause, RotateCcw, Cpu, Info } from 'lucide-react';
 import {
   LineChart,
   Line,
@@ -23,8 +23,7 @@ export default function Screen3Simulator({
   const [isPlaying, setIsPlaying] = useState(false);
   const [telemetryData, setTelemetryData] = useState([]);
   const [benchmarkMetrics, setBenchmarkMetrics] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [playbackSpeed, setPlaybackSpeed] = useState(1);
+  const playbackSpeed = 1;
 
   // Load benchmarks for accurate scenario metrics
   useEffect(() => {
@@ -39,17 +38,14 @@ export default function Screen3Simulator({
 
   // Load telemetry when scenario, config, or seed changes
   useEffect(() => {
-    setLoading(true);
     // CFG-A has no brownout controller, so fetch CFG-C or CFG-B telemetry
     const queryConfig = config === 'CFG-A' ? 'CFG-C' : config;
     fetchTimeseries(selectedScenario, queryConfig, seed, 2)
       .then((data) => {
         setTelemetryData(data.telemetry || []);
-        setLoading(false);
       })
       .catch((err) => {
         console.warn('Failed to load timeseries, using fallback interpolation:', err);
-        setLoading(false);
       });
   }, [selectedScenario, config, seed]);
 

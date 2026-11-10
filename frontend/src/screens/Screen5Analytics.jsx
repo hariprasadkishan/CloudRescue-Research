@@ -1,35 +1,25 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { fetchStatistics, fetchRecoveryMetrics, fetchSensitivity } from '../api';
+import { fetchStatistics, fetchSensitivity } from '../api';
 import ColophonFooter from '../components/ColophonFooter';
 import { Search, Filter, BarChart3, Info } from 'lucide-react';
 
-export default function Screen5Analytics({
-  selectedScenario = 'compound_stress',
-  setSelectedScenario,
-  setActiveScreen,
-}) {
+export default function Screen5Analytics() {
   const [statsData, setStatsData] = useState(null);
-  const [recoveryData, setRecoveryData] = useState(null);
   const [sensitivityData, setSensitivityData] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [filterScenario, setFilterScenario] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     Promise.all([
       fetchStatistics(),
-      fetchRecoveryMetrics(),
       fetchSensitivity(),
     ])
-      .then(([stats, recovery, sensitivity]) => {
+      .then(([stats, sensitivity]) => {
         setStatsData(stats);
-        setRecoveryData(recovery);
         setSensitivityData(sensitivity);
-        setLoading(false);
       })
       .catch((err) => {
         console.error('Failed to load analytics data:', err);
-        setLoading(false);
       });
   }, []);
 

@@ -1,9 +1,11 @@
 """Reconciles master_results.csv, aggregated_metrics.csv, and statistical_comparisons.csv with DEC-010 nominal-reference recovery metrics.
 
 Leaves all raw simulation files in results/experiment_360/runs/ completely untouched.
+Protected with safety confirmation guards to prevent accidental overwriting of frozen research results.
 """
 
 from __future__ import annotations
+import argparse
 import sys
 from pathlib import Path
 import numpy as np
@@ -50,9 +52,49 @@ def compute_aggregated_table(df_results: pd.DataFrame) -> pd.DataFrame:
 
 
 def main() -> None:
-    results_dir = PROJECT_ROOT / "results" / "experiment_360"
+    parser = argparse.ArgumentParser(
+        description="Reconcile CloudRescue recovery metrics per DEC-010 nominal reference.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument(
+        "--results-dir",
+        type=Path,
+        default=PROJECT_ROOT / "results" / "experiment_360",
+        help="Directory containing master_results.csv, aggregated_metrics.csv, and runs/",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Perform all calculations without writing or overwriting files on disk.",
+    )
+    parser.add_argument(
+        "--confirm-overwrite",
+        action="store_true",
+        help="Explicit confirmation required to write updated CSV files to disk.",
+    )
+
+    args = parser.parse_args()
+    results_dir = args.results_dir.resolve()
     runs_dir = results_dir / "runs"
     master_path = results_dir / "master_results.csv"
+
+    # Safety Guard
+    if not args.dry_run and not args.confirm_overwrite:
+        print("=" * 70, file=sys.stderr)
+        print("[SAFETY GUARD] RECONCILIATION PREVENTED AUTOMATIC EXECUTION", file=sys.stderr)
+        print("=" * 70, file=sys.stderr)
+        print(f"Target directory contains certified research results: {results_dir}", file=sys.stderr)
+        print("To verify calculations without modifying files on disk, use:", file=sys.stderr)
+        print("    python scripts/reconcile_recovery_metrics.py --dry-run\n", file=sys.stderr)
+        print("To explicitly authorize overwriting the results CSVs, use:", file=sys.stderr)
+        print("    python scripts/reconcile_recovery_metrics.py --confirm-overwrite\n", file=sys.stderr)
+        print("Operation cancelled. No files were modified.", file=sys.stderr)
+        print("=" * 70, file=sys.stderr)
+        sys.exit(1)
+
+    if not master_path.exists():
+        print(f"Error: {master_path} does not exist.", file=sys.stderr)
+        sys.exit(1)
 
     print("Step 1: Deriving nominal reference dimmers theta_nom*(c, s, w) from nominal runs...")
     nom_refs = {}
@@ -131,13 +173,23 @@ def main() -> None:
         updated_rows.append(r_dict)
 
     df_updated = pd.DataFrame(updated_rows)
+
+    if args.dry_run:
+        print("\n[DRY RUN] Step 3: Verified master results updates (360 rows). Writing skipped.")
+        df_agg = compute_aggregated_table(df_updated)
+        print(f"[DRY RUN] Step 4: Computed aggregated metrics ({len(df_agg)} rows). Writing skipped.")
+        print("[DRY RUN] Step 5: Statistical analysis check skipped in dry-run mode.")
+        print("[DRY RUN] SUCCESS: All reconciliation calculations verified successfully without modifying disk.")
+        return
+
+    # If --confirm-overwrite was provided:
     df_updated.to_csv(master_path, index=False)
-    print(f"Step 3: Updated {master_path.resolve()} with DEC-010 recovery metrics.")
+    print(f"Step 3: Updated {master_path} with DEC-010 recovery metrics.")
 
     df_agg = compute_aggregated_table(df_updated)
     agg_path = results_dir / "aggregated_metrics.csv"
     df_agg.to_csv(agg_path, index=False)
-    print(f"Step 4: Updated {agg_path.resolve()} with reconciled aggregated metrics.")
+    print(f"Step 4: Updated {agg_path} with reconciled aggregated metrics.")
 
     print("Step 5: Re-running paired statistical analysis...")
     analyze_master_results(str(master_path), str(results_dir))

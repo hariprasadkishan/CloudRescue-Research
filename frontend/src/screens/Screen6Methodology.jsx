@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ColophonFooter from '../components/ColophonFooter';
-import { Copy, Check, Info } from 'lucide-react';
+import { Copy, Check } from 'lucide-react';
 
 export default function Screen6Methodology({ setActiveScreen }) {
   const [copied, setCopied] = useState(false);
