@@ -35,7 +35,7 @@ All 10 major paper sections, formal IEEE Roman numeral headings, subsections, an
 
 | Section | Heading in Document | Page | Audit Status |
 | :--- | :--- | :---: | :--- |
-| **Header Block** | Title, Authors (Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan), IIIT Dharwad | Page 1 | **PASS** |
+| **Header Block** | Title, Authors (Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan, Tushar), IIIT Dharwad | Page 1 | **PASS** |
 | **Abstract & Index Terms** | Spanning abstract block with bold-italic `Abstract—` and `Index Terms—` | Page 1 | **PASS** |
 | **Section 1 / 2** | `I. INTRODUCTION` | Page 1 | **PASS** |
 | **Section 3** | `II. PROBLEM STATEMENT AND RESEARCH OBJECTIVES` (Subsections A–D) | Page 1 | **PASS** |
@@ -147,7 +147,7 @@ The bibliography conforms strictly to IEEE reference formatting guidelines. All 
 3. **Limitations & Caveats:**
    - Section 9.7 ("Threats to Validity and Scientific Limitations") explicitly preserves all eight documented simulation caveats: synthetic queueing assumptions, single-tier proxy architecture, discrete-event clock abstractions, lack of physical OS context-switch overhead, and scope limitations regarding physical cloud deployment.
 4. **Attribution and Clean Affiliation:**
-   - Document metadata attributes the work to Hari Prasad L, Yeruva Mahesh Reddy, and K. Ram Charan at the Indian Institute of Information Technology Dharwad.
+   - Document metadata attributes the work to Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan, and Tushar at the Indian Institute of Information Technology Dharwad.
    - No fictitious IEEE conference or journal template sponsorship/copyright stamps were invented.
 
 ---

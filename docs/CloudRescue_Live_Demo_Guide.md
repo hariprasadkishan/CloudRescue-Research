@@ -1,8 +1,8 @@
 # CloudRescue — Live Demonstration Guide & Defense Walkthrough
 
 **Document Version:** 1.0 (Submission-Ready)  
-**Authors:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan  
-**Affiliation:** Department of Computer Science and Engineering, Indian Institute of Information Technology Dharwad  
+**Authors:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan, Tushar (23BCS130)  
+**Affiliation:** Department of Computer Science and Engineering and Department of Data Science and AI Engineering, Indian Institute of Information Technology Dharwad  
 **Repository:** `https://github.com/hariprasadkishan/CloudRescue-Research`  
 **Target Audience:** Academic Examiners, Project Reviewers, and Live Demo Operators  
 

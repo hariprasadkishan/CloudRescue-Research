@@ -7,10 +7,10 @@
 [![Evaluation](https://img.shields.io/badge/evaluation-360%20Matched%20Runs%20(Frozen)-darkgreen.svg)](results/experiment_360/)
 [![Institution](https://img.shields.io/badge/institution-IIIT%20Dharwad-orange.svg)](https://iiitdwd.ac.in)
 
-> **Academic Capstone Research Project**  
+> **Academic Research Project**  
 > **Department of Computer Science and Engineering**  
 > **Indian Institute of Information Technology Dharwad (IIIT Dharwad)**  
-> **Authors:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan  
+> **Authors:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan, Tushar  
 > **Research Manuscript:** [`paper/CloudRescue_Research_Paper_Draft.md`](paper/CloudRescue_Research_Paper_Draft.md)
 
 ---
@@ -245,13 +245,14 @@ CloudRescue-Research/
 
 ## 10. Research Team & Academic Attribution
 
-This research was conducted at the **Department of Computer Science and Engineering, Indian Institute of Information Technology Dharwad (IIIT Dharwad)**:
+This research was conducted at the Department of Computer Science and Engineering, Indian Institute of Information Technology Dharwad (IIIT Dharwad).
 
 - **Hari Prasad L** ([@hariprasadkishan](https://github.com/hariprasadkishan)) — Project Architecture, Simulator Engineering, Controller & BALB Implementation
 - **Yeruva Mahesh Reddy** — Experimental Design, Sensitivity Analysis, Statistical Battery
 - **K. Ram Charan** — Data Reconciliation, Dashboard Frontend, Publication Visualizations
+- **Tushar** — Research Team Member
 
-**Advisor / Course Context:** B.Tech Computer Science and Engineering Capstone Research.  
+**Academic Context:** B.Tech Research Project, Indian Institute of Information Technology Dharwad.  
 **Foundational Literature:** Based on resilience survey and brownout paradigms by Welsh & Benkhelifa (*ACM Computing Surveys 2020*) and Klein et al. (*IEEE SRDS 2014*, *ICSE 2014*).
 
 ---
@@ -263,7 +264,7 @@ If you find this research, simulator, or experimental dataset useful, please cit
 ```bibtex
 @article{cloudrescue2026,
   title={{Autonomic Cloud Resilience Through Brownout-Based Graceful Degradation: A Simulation-Based Evaluation of Brownout-Aware Load Balancing}},
-  author={Hari Prasad L and Yeruva Mahesh Reddy and K. Ram Charan},
+  author={Hari Prasad L and Yeruva Mahesh Reddy and K. Ram Charan and Tushar},
   journal={Department of Computer Science and Engineering, IIIT Dharwad, Working Paper},
   year={2026},
   month={November},

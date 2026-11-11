@@ -1,8 +1,8 @@
 # CloudRescue — Comprehensive Viva Voce & Defense Preparation Guide
 
 **Document Version:** 1.0 (Final Submission)  
-**Authors:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan  
-**Department:** Department of Computer Science and Engineering  
+**Authors:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan, Tushar (23BCS130)  
+**Department:** Department of Computer Science and Engineering and Department of Data Science and AI Engineering  
 **Institution:** Indian Institute of Information Technology Dharwad (IIIT Dharwad), Karnataka, India  
 **Scope:** 65 In-Depth Examination Questions & Rigorous Academic Answers across 12 Subject Areas  
 

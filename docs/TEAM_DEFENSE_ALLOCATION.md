@@ -2,7 +2,7 @@
 
 **Document Version:** 1.0 (Submission-Ready)  
 **Project:** Autonomic Cloud Resilience Through Brownout-Based Graceful Degradation  
-**Department:** Department of Computer Science and Engineering  
+**Department:** Department of Computer Science and Engineering and Department of Data Science and AI Engineering  
 **Institution:** Indian Institute of Information Technology Dharwad (IIIT Dharwad), Karnataka, India  
 **Date:** November 2026  
 
@@ -10,7 +10,7 @@
 
 ## 1. Executive Summary & Team Roles
 
-This document establishes the formal division of responsibility, presentation assignments, and question-routing protocols among the three co-authors for the final academic defense and viva voce examination.
+This document establishes the formal division of responsibility, presentation assignments, and question-routing protocols among the co-authors for the final academic defense and viva voce examination.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
@@ -26,6 +26,9 @@ This document establishes the formal division of responsibility, presentation as
 ├─────────────────────┼──────────────────────────────┼───────────────────────────────────┤
 │ K. Ram Charan       │ Control & Implementation Lead│ Velocity PI Mathematics, SimPy    │
 │                     │                              │ Simulator, Telemetry & Trade-Offs │
+├─────────────────────┼──────────────────────────────┼───────────────────────────────────┤
+│ Tushar (23BCS130)   │ Research Team Member         │ Research Team Member,             │
+│                     │                              │ Defense & Q&A Support             │
 └─────────────────────┴──────────────────────────────┴───────────────────────────────────┘
 ```
 
@@ -104,8 +107,15 @@ Every technical subject in the research manuscript and presentation deck is assi
   - *"Why did BALB reduce service fidelity if pre-registered hypothesis H1,3 expected an increase?"*
   - *"Why velocity-form PI instead of positional PID?"*
   - *"What are the limitations of assuming M/M/1-FIFO queues?"*
-- **Closing Phrase for Q&A:**
-  > *"Thank you. All three of us are now open to receive questions and discussion from the committee."*
+- **Handoff / Closing Phrase for Q&A:**
+  > *"Thank you. All of us are now open to receive questions and discussion from the committee."*
+
+---
+
+### Member 4: Tushar (23BCS130) (Research Team Member)
+- **Role:** Research Team Member, Committee Q&A Support.
+- **Institutional Affiliation:** Department of Computer Science and Engineering, Indian Institute of Information Technology Dharwad.
+- **Core Defense Focus:** Supporting the research team during defense discussion and examination committee Q&A.
 
 ---
 

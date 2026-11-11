@@ -4,7 +4,7 @@
 **Status:** Approved — Research Methodology, Metric Formulations & Simulation Architecture Finalized  
 **Institution:** IIIT Dharwad  
 **Project type:** Academic research, simulation and software implementation  
-**Team:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan  
+**Team:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan, Tushar (23BCS130)  
 
 ---
 

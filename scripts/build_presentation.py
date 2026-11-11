@@ -177,63 +177,65 @@ p_sub1.font.size = Pt(15)
 p_sub1.font.color.rgb = ACCENT_CYAN
 p_sub1.font.name = FONT_HEADING
 
-# 3 Team Cards
+# 4 Team Cards
 team_data = [
     ("Hari Prasad L", "Lead Author & System Architect", "Core Balancer Architecture, DEC-010 Formulation & Paper Writing"),
     ("Yeruva Mahesh Reddy", "Evaluation & Statistical Analysis", "360-Run Factorial Benchmark, Paired Tests & Sensitivity Sweep"),
-    ("K. Ram Charan", "Controller Design & Implementation", "Velocity-Form PI Controller, Multi-Stream PRNG & Telemetry Engine")
+    ("K. Ram Charan", "Controller Design & Implementation", "Velocity-Form PI Controller, Multi-Stream PRNG & Telemetry Engine"),
+    ("Tushar (23BCS130)", "Research Team Member", "Department of Computer Science and Engineering, IIIT Dharwad")
 ]
 
-card_w = Inches(3.55)
-card_gap = Inches(0.34)
-start_x = Inches(1.0)
+card_w = Inches(2.65)
+card_gap = Inches(0.24)
+start_x = Inches(0.95)
 card_y = Inches(3.8)
 card_h = Inches(1.9)
 
 for idx, (name, role, desc) in enumerate(team_data):
     cx = start_x + idx * (card_w + card_gap)
     add_card(s1, cx, card_y, card_w, card_h, bg=CARD_BG, border=CARD_BORDER)
-    tb = s1.shapes.add_textbox(cx + Inches(0.2), card_y + Inches(0.18), card_w - Inches(0.4), card_h - Inches(0.35))
+    tb = s1.shapes.add_textbox(cx + Inches(0.18), card_y + Inches(0.16), card_w - Inches(0.36), card_h - Inches(0.32))
     tf = tb.text_frame
     tf.word_wrap = True
     
     p = tf.paragraphs[0]
     p.text = name
-    p.font.size = Pt(13)
+    p.font.size = Pt(11.5)
     p.font.bold = True
     p.font.color.rgb = TEXT_WHITE
     p.font.name = FONT_HEADING
     
     p_r = tf.add_paragraph()
     p_r.text = role
-    p_r.font.size = Pt(10)
+    p_r.font.size = Pt(9)
     p_r.font.bold = True
     p_r.font.color.rgb = ACCENT_BLUE
     p_r.font.name = FONT_BODY
     
-    p_d = tf.add_paragraph()
-    p_d.text = desc
-    p_d.font.size = Pt(8.5)
-    p_d.font.color.rgb = TEXT_MUTED
-    p_d.font.name = FONT_BODY
+    if desc:
+        p_d = tf.add_paragraph()
+        p_d.text = desc
+        p_d.font.size = Pt(8)
+        p_d.font.color.rgb = TEXT_MUTED
+        p_d.font.name = FONT_BODY
 
 # Institutional Footer
-tb_inst = s1.shapes.add_textbox(Inches(1.0), Inches(5.95), Inches(11.333), Inches(0.9))
+tb_inst = s1.shapes.add_textbox(Inches(0.95), Inches(5.95), Inches(11.4), Inches(0.9))
 tf_inst = tb_inst.text_frame
 p_inst1 = tf_inst.paragraphs[0]
-p_inst1.text = "Department of Computer Science and Engineering"
-p_inst1.font.size = Pt(12)
+p_inst1.text = "Department of Computer Science and Engineering and Department of Data Science and AI Engineering"
+p_inst1.font.size = Pt(11)
 p_inst1.font.bold = True
 p_inst1.font.color.rgb = TEXT_WHITE
 
 p_inst2 = tf_inst.add_paragraph()
 p_inst2.text = "Indian Institute of Information Technology Dharwad (IIIT Dharwad), Karnataka, India"
-p_inst2.font.size = Pt(11)
+p_inst2.font.size = Pt(10)
 p_inst2.font.color.rgb = ACCENT_BLUE
 
 p_inst3 = tf_inst.add_paragraph()
 p_inst3.text = "Preprint Working Paper • Target Venues: IEEE Transactions on Cloud Computing / ACM TAAS • November 2026"
-p_inst3.font.size = Pt(9)
+p_inst3.font.size = Pt(8.5)
 p_inst3.font.color.rgb = TEXT_MUTED
 
 # ==============================================================================
@@ -1075,29 +1077,36 @@ for idx, (title, bullets, acc) in enumerate(takeaways):
     add_bullet_card(s15, cx, c15_y, c15_w, c15_h, title, bullets, acc)
 
 add_card(s15, Inches(0.8), Inches(5.65), Inches(11.733), Inches(1.2), bg=CARD_ALT_BG, border=ACCENT_BLUE)
-tb_s15_qa = s15.shapes.add_textbox(Inches(1.0), Inches(5.72), Inches(11.333), Inches(1.05))
+tb_s15_qa = s15.shapes.add_textbox(Inches(1.0), Inches(5.68), Inches(11.333), Inches(1.1))
 tf_s15_qa = tb_s15_qa.text_frame
 tf_s15_qa.word_wrap = True
 
 p_qa0 = tf_s15_qa.paragraphs[0]
 p_qa0.text = "OPEN RESEARCH ARTIFACTS & QUESTIONS / DISCUSSION"
-p_qa0.font.size = Pt(11)
+p_qa0.font.size = Pt(10.5)
 p_qa0.font.bold = True
 p_qa0.font.color.rgb = ACCENT_BLUE
 p_qa0.alignment = PP_ALIGN.CENTER
 
 p_qa1 = tf_s15_qa.add_paragraph()
 p_qa1.text = "Open Source Repository: https://github.com/hariprasadkishan/CloudRescue-Research"
-p_qa1.font.size = Pt(10)
+p_qa1.font.size = Pt(9.5)
 p_qa1.font.color.rgb = TEXT_WHITE
 p_qa1.font.name = FONT_MONO
 p_qa1.alignment = PP_ALIGN.CENTER
 
 p_qa2 = tf_s15_qa.add_paragraph()
-p_qa2.text = "Thank you! We welcome questions, feedback, and discussion from the examination committee."
+p_qa2.text = "Research Team: Hari Prasad L • Yeruva Mahesh Reddy • K. Ram Charan • Tushar (23BCS130)"
 p_qa2.font.size = Pt(9.5)
-p_qa2.font.color.rgb = TEXT_MUTED
+p_qa2.font.bold = True
+p_qa2.font.color.rgb = ACCENT_CYAN
 p_qa2.alignment = PP_ALIGN.CENTER
+
+p_qa3 = tf_s15_qa.add_paragraph()
+p_qa3.text = "Department of Computer Science & Engineering and Department of Data Science & AI Engineering, IIIT Dharwad"
+p_qa3.font.size = Pt(8.5)
+p_qa3.font.color.rgb = TEXT_MUTED
+p_qa3.alignment = PP_ALIGN.CENTER
 
 print("Saving Presentation...")
 prs.save(OUTPUT_PPTX)

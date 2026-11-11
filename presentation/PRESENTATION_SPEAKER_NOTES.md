@@ -25,6 +25,9 @@
 ├─────────────────────┼───────────────────────┼───────────────┼──────────────────────────┤
 │ K. Ram Charan       │ Slides 11 – 15        │ ~3.0 Minutes  │ Results, Trade-Offs,     │
 │ (Simulation Lead)   │ (Results & Takeaways) │ (7:00 – 10:00)│ Limitations & Conclusion │
+├─────────────────────┼───────────────────────┼───────────────┼──────────────────────────┤
+│ Tushar (23BCS130)   │ Co-Presenter & Q&A    │ Defense & Q&A │ Research Team Member,    │
+│ (Team Member)       │ Defense Support       │               │ Committee Discussion     │
 └─────────────────────┴───────────────────────┴───────────────┴──────────────────────────┘
 ```
 
@@ -38,7 +41,7 @@
 - **Core Message:** CloudRescue is an autonomic cloud resilience framework that pairs decentralized brownout control with a novel brownout-aware load balancer to protect SLAs under extreme overload.
 - **Visuals on Screen:** Deep navy title slide with project badge, paper preprint target, team member roles, and IIIT Dharwad credentials.
 - **Spoken Script:**
-  > "Respected members of the examination committee, faculty advisors, and colleagues: Good morning. I am Hari Prasad, presenting alongside my co-authors Yeruva Mahesh Reddy and Ram Charan from the Department of Computer Science and Engineering at IIIT Dharwad.
+  > "Respected members of the examination committee, faculty advisors, and colleagues: Good morning. I am Hari Prasad, presenting alongside my co-authors Yeruva Mahesh Reddy, Ram Charan, and Tushar from the Department of Computer Science and Engineering and Department of Data Science and AI Engineering at IIIT Dharwad.
   > 
   > Today, we present our research project: *'Autonomic Cloud Resilience Through Brownout-Based Graceful Degradation: A Simulation-Based Evaluation of Brownout-Aware Load Balancing'*.
   > 
@@ -313,7 +316,7 @@
   > 3. Workload equity and service fidelity represent a fundamental trade-off that cloud architects must balance deliberately.
   > 
   > All simulation models, analysis scripts, and our certified 360-run dataset are publicly archived on GitHub. We thank our advisor and the committee, and we now welcome your questions."
-- **Presenter Cue:** All three team members stand side-by-side at the lectern, make eye contact with the examination committee, and invite questions.
+- **Presenter Cue:** All four team members stand side-by-side at the lectern, make eye contact with the examination committee, and invite questions.
 
 ---
 
@@ -392,6 +395,7 @@ Here are the six most probable critical questions committee members will ask, al
 - [x] Presenter 1 (Hari Prasad L) rehearsed Slides 1–5 (3m 30s target).
 - [x] Presenter 2 (Yeruva Mahesh Reddy) rehearsed Slides 6–10 (3m 30s target).
 - [x] Presenter 3 (K. Ram Charan) rehearsed Slides 11–15 (3m 00s target).
+- [x] Research Team (Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan, Tushar) rehearsed presentation & Q&A.
 - [x] Hand-offs between presenters practiced smoothly without dead air.
 - [x] Defense Q&A answers reviewed with all members ready to jump in on their respective domains.
 - [x] Backup PDF version (`presentation/CloudRescue_Final_Presentation.pdf`) verified on USB drive.

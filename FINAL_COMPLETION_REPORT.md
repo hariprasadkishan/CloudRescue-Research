@@ -32,7 +32,7 @@ Created a comprehensive, publication-grade GitHub `README.md` at the project roo
 - **Technology Stack & Installation:** Complete prerequisites (Python 3.10+, Node.js 18+), virtualenv setup, dependency installation from `requirements.txt`.
 - **Service Launch Commands:** Step-by-step instructions for running the FastAPI backend (`uvicorn server.main:app --port 8000`) and the React dashboard (`cd frontend && npm install && npm run dev`).
 - **Reproduction Pipeline:** Documented commands for running validation simulations (`scripts/run_baseline.py`, `scripts/run_brownout.py`, `scripts/run_balb.py`), re-evaluating paired statistics (`scripts/analyze_results.py`), and generating publication plots (`scripts/generate_plots.py`).
-- **Research Team Attribution:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan (IIIT Dharwad).
+- **Research Team Attribution:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan, Tushar (23BCS130) (IIIT Dharwad).
 - **BibTeX Citation Entry:** Ready for academic citation.
 
 ### Task 2 — Dependency Specification (`/requirements.txt`)

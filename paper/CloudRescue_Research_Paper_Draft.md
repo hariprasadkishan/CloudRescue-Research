@@ -2,9 +2,9 @@
 
 **Working Title:** Autonomic Cloud Resilience Through Brownout-Based Graceful Degradation: A Simulation-Based Evaluation of Brownout-Aware Load Balancing  
 **Document Stage:** Complete Paper Draft (Sections 1–10)  
-**Authors:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan (Department of Computer Science and Engineering and Department of Data Science and AI Engineering, Indian Institute of Information Technology Dharwad, Karnataka 580009, India. Email: {23bds022, 23bcs136, 23bds029}@iiitdwd.ac.in)  
+**Authors:** Hari Prasad L (23BDS022), Yeruva Mahesh Reddy (23BCS136), K. Ram Charan (23BDS029), Tushar (23BCS130) (Department of Computer Science and Engineering and Department of Data Science and AI Engineering, Indian Institute of Information Technology Dharwad, Karnataka 580009, India. Email: {23bds022, 23bcs136, 23bds029, 23bcs130}@iiitdwd.ac.in)  
 **Date:** November 2026  
-**Potential Target Venues (Suggested):** IEEE Transactions on Cloud Computing / ACM Transactions on Autonomous and Adaptive Systems (Suggested for B.Tech Capstone Thesis)
+**Potential Target Venues (Suggested):** IEEE Transactions on Cloud Computing / ACM Transactions on Autonomous and Adaptive Systems (Suggested for B.Tech Research Project)
 
 ---
 

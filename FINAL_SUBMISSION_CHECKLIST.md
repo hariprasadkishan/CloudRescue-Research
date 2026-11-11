@@ -1,12 +1,13 @@
 # CloudRescue Research Project — Final Submission & Verification Checklist
 
 **Project Title:** Autonomic Cloud Resilience Through Brownout-Based Graceful Degradation: A Simulation-Based Evaluation of Brownout-Aware Load Balancing (BALB)  
-**Institution:** Department of Computer Science and Engineering, Indian Institute of Information Technology Dharwad (IIIT Dharwad), Karnataka, India  
+**Institution:** Department of Computer Science and Engineering and Department of Data Science and AI Engineering, Indian Institute of Information Technology Dharwad (IIIT Dharwad), Karnataka, India  
 **Academic Year:** 2026–2027 | **Evaluation Date:** November 2026  
 **Authors:**
-- **Hari Prasad L** (Roll No. Lead / Systems Architecture)
-- **Yeruva Mahesh Reddy** (Algorithmic Evaluation / Statistical Verification)
-- **K. Ram Charan** (Simulation Modeling / Frontend & Diagnostics)
+- **Hari Prasad L** (Roll No. 23BDS022 / Systems Architecture)
+- **Yeruva Mahesh Reddy** (Roll No. 23BCS136 / Algorithmic Evaluation / Statistical Verification)
+- **K. Ram Charan** (Roll No. 23BDS029 / Simulation Modeling / Frontend & Diagnostics)
+- **Tushar** (Roll No. 23BCS130 / Research Team Member)
 
 ---
 
@@ -172,6 +173,7 @@ We, the undersigned project authors, hereby certify and declare that:
 | **Hari Prasad L** | Lead Systems Architect | Dept. of CSE, IIIT Dharwad | **Signed & Approved** |
 | **Yeruva Mahesh Reddy** | Evaluation & Statistics Lead | Dept. of CSE, IIIT Dharwad | **Signed & Approved** |
 | **K. Ram Charan** | Simulation & Frontend Lead | Dept. of CSE, IIIT Dharwad | **Signed & Approved** |
+| **Tushar (23BCS130)** | Research Team Member | Dept. of CSE, IIIT Dharwad | **Signed & Approved** |
 
 **Date of Formal Submission:** November 10, 2026  
 **Final Status:** **ALL 5 TASKS 100% COMPLETED AND VERIFIED**
