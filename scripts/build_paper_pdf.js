@@ -696,8 +696,8 @@ a:hover {
     <strong>Hari Prasad L</strong>, <strong>Yeruva Mahesh Reddy</strong>, and <strong>K. Ram Charan</strong>
   </div>
   <div class="paper-affil">
-    Department of Computer Science and Engineering, Indian Institute of Information Technology Dharwad, Karnataka 580009, India<br>
-    <em>Email: {hariprasad, yeruvamahesh, ramcharan}@iiitdwd.ac.in</em>
+    Department of Computer Science and Engineering and Department of Data Science and AI Engineering, Indian Institute of Information Technology Dharwad, Karnataka 580009, India<br>
+    <em>Email: {23bds022, 23bcs136, 23bds029}@iiitdwd.ac.in</em>
   </div>
   <div class="paper-meta-badge">
     Preprint Working Paper &bull; Target: IEEE Transactions on Cloud Computing / ACM TAAS &bull; Date: November 2026
