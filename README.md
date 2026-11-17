@@ -11,7 +11,21 @@
 > **Department of Computer Science and Engineering**  
 > **Indian Institute of Information Technology Dharwad (IIIT Dharwad)**  
 > **Authors:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan, Tushar  
-> **Research Manuscript:** [`paper/CloudRescue_Research_Paper_Draft.md`](paper/CloudRescue_Research_Paper_Draft.md)
+> **Research Paper (PDF):** [`docs/CloudRescue_Refined_IEEE_v2.pdf`](docs/CloudRescue_Refined_IEEE_v2.pdf)  
+> **Research Manuscript Draft:** [`paper/CloudRescue_Research_Paper_Draft.md`](paper/CloudRescue_Research_Paper_Draft.md)
+
+---
+
+## Research Paper
+
+The latest refined IEEE conference research paper for CloudRescue is available directly in the repository:
+
+- 📄 **Research Paper (PDF):** [`docs/CloudRescue_Refined_IEEE_v2.pdf`](docs/CloudRescue_Refined_IEEE_v2.pdf)
+- **Title:** *Autonomic Cloud Resilience Through Brownout-Based Graceful Degradation: A Simulation-Based Evaluation of Brownout-Aware Load Balancing (BALB)*
+- **Authors:** Hari Prasad L, Yeruva Mahesh Reddy, K. Ram Charan, Tushar
+- **Affiliation:** Department of Computer Science and Engineering and Department of Data Science and AI Engineering, Indian Institute of Information Technology Dharwad, Karnataka 580009, India
+- **Email:** `{23bds022, 23bcs136, 23bds029, 23bcs130}@iiitdwd.ac.in`
+- **Scope & Contributions:** Formulates velocity-form discrete PI control with anti-windup clamping and active stall probing (DEC-010); couples local control with Brownout-Aware Load Balancing (BALB) and soft-queue fallback (DEC-008); evaluates 360 primary simulation runs across 30 matched PRNG seeds with Common Random Numbers (CRN) isolation; and provides comprehensive statistical validation and sensitivity analyses.
 
 ---
 
@@ -208,6 +222,11 @@ CloudRescue-Research/
 │   ├── ARCHITECTURE.md            # Detailed simulator architecture & mathematical derivations
 │   ├── DECISIONS.md               # ADRs logging decisions DEC-001 through DEC-010
 │   └── PRD.md                     # Product requirements & 10 standardized resilience metrics
+├── docs/                          # Research paper PDF, presentation materials, and defense guides
+│   ├── CloudRescue_Refined_IEEE_v2.pdf  # Latest refined IEEE conference research paper PDF
+│   ├── CloudRescue_Live_Demo_Guide.md   # Interactive simulator and dashboard demonstration guide
+│   ├── CloudRescue_Viva_Preparation.md  # Comprehensive defense questions & answers
+│   └── TEAM_DEFENSE_ALLOCATION.md       # Team responsibilities and defense slide ownership
 ├── frontend/                      # React 19 + Vite + Tailwind research dashboard
 │   ├── src/screens/               # 7 editorial screens (Overview, Benchmark, Analytics, etc.)
 │   └── vite.config.js             # Dev server & backend proxy configuration

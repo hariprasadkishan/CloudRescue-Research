@@ -33,6 +33,7 @@ dist-ssr/
 .env
 .env.*
 !.env.example
+*.env.local
 *.pem
 *.key
 *.cert
@@ -43,13 +44,35 @@ id_ed25519
 
 # IDEs & OS artifacts
 .DS_Store
+._*
 Thumbs.db
+desktop.ini
 .idea/
 .vscode/*
 !.vscode/extensions.json
 *.swp
 *.swo
+*.kate-swp
 *~
+
+# Temporary & backup files
+*.tmp
+*.bak
+*.backup
+
+# LaTeX build artifacts & temporary files
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.synctex.gz
+*.xdv
+*.fls
+*.fdb_latexmk
+
+# Local working directories
+CloudRescue_Conference_Paper/
 
 # Logs (preserving certified frozen experiment execution logs)
 logs/
